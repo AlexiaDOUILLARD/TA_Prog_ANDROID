@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TA_Prog_ANDROID</string>
     <string name="mon_profil">MON PROFIL</string>
     <string name="un_homme">Un homme</string>
     <string name="quel_ge_avez_vous">Quel âge avez-vous ?</string>
@@ -12,4 +11,5 @@
     <string name="plus_de_60_ans">Plus de 60 ans</string>
     <string name="question_1">question_1</string>
     <string name="question_2">question_2</string>
+    <string name="coeur">Mon coeur</string>
 </resources>

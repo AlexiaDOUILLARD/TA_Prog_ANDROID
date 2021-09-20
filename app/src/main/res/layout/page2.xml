@@ -124,7 +124,7 @@
         android:id="@+id/textView"
         android:layout_width="284dp"
         android:layout_height="97dp"
-        android:text="Mon coeur"
+        android:text="@string/coeur"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
