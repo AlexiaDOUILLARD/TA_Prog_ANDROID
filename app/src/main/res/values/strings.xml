@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name" translatable="false">TA_Prog_ANDROID</string>
-    <string name="mon_profil">MON PROFIL</string>
-    <string name="un_homme">Un homme</string>
-    <string name="quel_ge_avez_vous">Quel âge avez-vous ?</string>
-    <string name="suivant">Suivant</string>
-    <string name="une_femme">Une femme</string>
-    <string name="vous_tes">Vous êtes :</string>
-    <string name="moins_de_40_ans">Moins de 40 ans</string>
-    <string name="entre_40_et_60_ans">Entre 40 et 60 ans</string>
-    <string name="plus_de_60_ans">Plus de 60 ans</string>
-    <string name="profil_logo">profil_logo</string>
-    <string name="question_1">question_1</string>
-    <string name="question_2">question_2</string>
+    <string name="mon_profil">MY PROFILE</string>
+    <string name="un_homme">A man</string>
+    <string name="quel_ge_avez_vous">How old are you ?</string>
+    <string name="suivant">Next</string>
+    <string name="une_femme">A woman</string>
+    <string name="vous_tes">You are :</string>
+    <string name="moins_de_40_ans">Under 40</string>
+    <string name="entre_40_et_60_ans">Between 40 and 60 years old</string>
+    <string name="plus_de_60_ans">Over 60</string>
+    <string name="profil_logo" translatable="false">profil_logo</string>
+    <string name="question_1" translatable="false">question_1</string>
+    <string name="question_2" translatable="false">question_2</string>
 </resources>

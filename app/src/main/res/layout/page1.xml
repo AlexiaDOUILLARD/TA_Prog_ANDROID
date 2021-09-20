@@ -24,33 +24,22 @@
         android:id="@+id/imageView3"
         android:layout_width="132dp"
         android:layout_height="165dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/profil_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_utilisateur" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="413dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="67dp"
         android:layout_height="123dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="196dp"
         android:contentDescription="@string/question_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/first"
@@ -60,54 +49,25 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="228dp"
         android:text="@string/vous_tes"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FBFBFB"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/Sexe_choice_homme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/un_homme"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FBF9F9"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <CheckBox
-        android:id="@+id/Sexe_choice_femme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/une_femme"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FDFDFD"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sexe_choice_homme" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="68dp"
         android:layout_height="186dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/question_2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/deux" />
@@ -116,7 +76,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="300dp"
         android:text="@string/quel_ge_avez_vous"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FAFAFA"
@@ -124,61 +84,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/age_moins40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:minHeight="48dp"
-        android:text="@string/moins_de_40_ans"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FBF9F9"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.651"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <CheckBox
-        android:id="@+id/age_40_60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:text="@string/entre_40_et_60_ans"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#F3F3F3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_moins40" />
-
-    <CheckBox
-        android:id="@+id/age_60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:minHeight="48dp"
-        android:text="@string/plus_de_60_ans"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FAF9F9"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_40_60" />
 
     <Button
         android:id="@+id/Suivant_1"
         android:layout_width="86dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="48dp"
         android:background="#090808"
         android:backgroundTint="#020101"
         android:text="@string/suivant"
@@ -188,7 +101,76 @@
         android:theme="@android:style/Theme.Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="224dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/sexe_homme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Un homme"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#F6F0F0"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/sexe_femme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Une femme"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FBF6F6"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/Groupe_age"
+        android:layout_width="267dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/moins_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moins de 40ans"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#F6F2F2"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/entre_40_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entre 40 et 60ans"
+            android:textColor="#FAF9F9"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/Plus_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plus de 60 ans"
+            android:textColor="#F8F6F6"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
