@@ -128,7 +128,8 @@
         android:text="Avez-vous un problème cardiaque ?"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="145dp" />
 
     <TextView
@@ -137,7 +138,7 @@
         android:layout_height="wrap_content"
         android:text="Avez-vous un problème de cholestérol ?"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         tools:layout_editor_absoluteY="220dp" />
 
     <TextView
@@ -147,7 +148,7 @@
         android:text="Etes-vous diabétique ?"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="45dp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         tools:layout_editor_absoluteY="295dp" />
 
     <TextView
@@ -157,7 +158,7 @@
         android:text="Avez-vous de l'hypertension ?"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="45dp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
         tools:layout_editor_absoluteY="370dp" />
 
     <TextView
@@ -167,7 +168,8 @@
         android:text="Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?"
         android:textSize="17sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="467dp" />
 
     <TextView
@@ -177,7 +179,8 @@
         android:text="Connaissez-vous votre indice de masse corporelle (IMC) ?"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
         tools:layout_editor_absoluteY="623dp" />
 
     <CheckBox
