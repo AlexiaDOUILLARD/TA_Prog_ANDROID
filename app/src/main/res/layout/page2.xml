@@ -13,17 +13,17 @@
         android:layout_width="115dp"
         android:layout_height="96dp"
         android:layout_marginEnd="84dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/coeur"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/coeur"
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/coeur"
         android:layout_width="268dp"
         android:layout_height="65dp"
-        android:text="Mon coeur"
+        android:text="@string/mon_coeur"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -33,23 +33,23 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/prblmcardiaque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
-        android:text="Avez-vous un problème cardiaque ?"
+        android:text="@string/avez_vous_un_probl_me_cardiaque"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/prblmcolesterol"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/prblmcolesterol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avez-vous un problème de cholestérol ?"
+        android:text="@string/avez_vous_un_probl_me_de_cholest_rol"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
@@ -57,10 +57,10 @@
         tools:layout_editor_absoluteY="189dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/diabetique"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Etes-vous diabétique ?"
+        android:text="@string/etes_vous_diab_tique"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/spinner4"
@@ -69,10 +69,10 @@
         tools:layout_editor_absoluteY="286dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/hypertension"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avez-vous de l'hypertension ?"
+        android:text="@string/avez_vous_de_l_hypertension"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,32 +81,17 @@
         tools:layout_editor_absoluteY="347dp" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/AVC"
         android:layout_width="286dp"
         android:layout_height="164dp"
-        android:layout_marginEnd="23dp"
-        android:text="Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?"
+        android:text="@string/avez_vous_un_parent_du_premier_degr_p_re_m_re_fr_re_ou_s_ur_qui_a_eu_des_probl_mes_cardiaques_infarctus_avc_mort_subite_avant_55_ans_pour_un_homme_ou_avant_65_ans_chez_une_femme"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="401dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="274dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="23dp"
-        android:text="Connaissez-vous votre indice de masse corporelle (IMC) ?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinner7"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="601dp" />
+        tools:layout_editor_absoluteY="398dp" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -145,15 +130,15 @@
         app:layout_constraintBottom_toTopOf="@+id/spinner6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/hypertension"
+        app:layout_constraintTop_toTopOf="@+id/hypertension"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinner6"
         android:layout_width="104dp"
         android:layout_height="37dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="12dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="452dp" />
@@ -162,10 +147,11 @@
         android:id="@+id/spinner7"
         android:layout_width="105dp"
         android:layout_height="29dp"
-        android:layout_marginEnd="16dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="601dp" />
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="668dp" />
 
     <Spinner
         android:id="@+id/spinner8"
@@ -174,5 +160,17 @@
         android:entries="@array/Spiner1_page2"
         tools:layout_editor_absoluteX="296dp"
         tools:layout_editor_absoluteY="347dp" />
+
+    <TextView
+        android:id="@+id/IMC"
+        android:layout_width="381dp"
+        android:layout_height="44dp"
+        android:text="@string/connaissez_vous_votre_indice_de_masse_corporelle_imc"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="612dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
