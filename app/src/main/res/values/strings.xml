@@ -13,7 +13,13 @@
     <string name="entre_40_et_60ans">Between 40 and 60 years old</string>
     <string name="plus_de_60_ans">Over 60 years</string>
     <string name="pr_c_dent">Previous</string>
-    <string name="image_daccueil" translatable="false" />
+    <string name="image_daccueil" translatable="false">stethoscope</string>
     <string name="nom">Name :</string>
     <string name="je_me_test">I test myself</string>
+    <string name="point_coeur_cardiologist">Have you ever reviewed your cardiovascular risk with your doctor?</string>
+    <string name="bilan_cardiaque">Have you ever had a heart checkup?</string>
+    <string name="consult_un_cardiologue">Have you ever seen a cardiologist?</string>
+    <string name="question_3" translatable="false">question_3</string>
+    <string name="stetoscope" translatable="false">stetoscope</string>
+    <string name="mon_suivi_cardiaque">MY HEART MONITORING</string>
 </resources>

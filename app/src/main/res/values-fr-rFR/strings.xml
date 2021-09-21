@@ -12,4 +12,8 @@
     <string name="pr_c_dent">Précédent</string>
     <string name="nom">Nom :</string>
     <string name="je_me_test">Je me test</string>
+    <string name="point_coeur_cardiologist">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
+    <string name="bilan_cardiaque">Avez-vous déjà effectué un bilan cardiaque ?</string>
+    <string name="consult_un_cardiologue">Avez-vous déjà consulté un cardiologue ?</string>
+    <string name="mon_suivi_cardiaque">MON SUIVI CARDIAQUE</string>
 </resources>

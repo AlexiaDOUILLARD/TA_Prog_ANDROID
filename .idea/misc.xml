@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout-land/activity_first.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout-land/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout-land/activity_third.xml" value="0.1728395061728395" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout-land/page1.xml" value="0.25" />
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout-land/page3.xml" value="0.25" />
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/activity_first.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/activity_third.xml" value="0.19519927536231885" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page1.xml" value="0.22" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page2.xml" value="0.22" />
-        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page3.xml" value="0.12092391304347826" />
+        <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page3.xml" value="0.25" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page4.xml" value="0.43914473684210525" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page5.xml" value="0.12092391304347826" />
         <entry key="..\:/Users/alexi/AndroidStudioProjects/TA_Prog_ANDROID/app/src/main/res/layout/page6.xml" value="0.12092391304347826" />
