@@ -21,4 +21,5 @@
     <string name="avez_vous_d_j_effectu_un_bilan_cardiaque">Have you ever had a heart checkup?</string>
     <string name="avez_vous_d_j_consult_un_cardiologue">Have you ever seen a cardiologist?</string>
     <string name="trois" translatable="false">trois</string>
+    <string name="msg_error">error</string>
 </resources>
