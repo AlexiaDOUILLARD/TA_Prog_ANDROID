@@ -10,4 +10,6 @@
     <string name="entre_40_et_60ans">Entre 40 et 60ans</string>
     <string name="plus_de_60_ans">Plus de 60ans</string>
     <string name="pr_c_dent">Précédent</string>
+    <string name="nom">Nom :</string>
+    <string name="je_me_test">Je me test</string>
 </resources>
