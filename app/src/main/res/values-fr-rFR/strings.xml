@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mon_profil">MON PROFIL</string>
-    <string name="un_homme">Un homme</string>
     <string name="quel_ge_avez_vous">Quel âge avez-vous ?</string>
     <string name="suivant">Suivant</string>
-    <string name="une_femme">Une femme</string>
     <string name="vous_tes">Vous êtes :</string>
-    <string name="moins_de_40_ans">Moins de 40 ans</string>
-    <string name="entre_40_et_60_ans">Entre 40 et 60 ans</string>
-    <string name="plus_de_60_ans">Plus de 60 ans</string>
+    <string name="un_homme">Un homme</string>
+    <string name="une_femme">Une femme</string>
+    <string name="moins_de_40ans">Moins de 40ans</string>
+    <string name="entre_40_et_60ans">Entre 40 et 60ans</string>
+    <string name="plus_de_60_ans">Plus de 60ans</string>
+    <string name="pr_c_dent">Précédent</string>
 </resources>
