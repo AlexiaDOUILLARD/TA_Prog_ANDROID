@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page3);
+        setContentView(R.layout.page2);
         //Pageacceuil_button_test = findViewById(R.id.Pageacceuil_button_test);
 
 //        Pageacceuil_button_test.setOnClickListener(new View.OnClickListener() {

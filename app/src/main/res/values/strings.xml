@@ -16,4 +16,9 @@
     <string name="image_daccueil" translatable="false" />
     <string name="nom">Name :</string>
     <string name="je_me_test">I test myself</string>
+    <string name="mon_suivi_cardiaque">MY HEART MONITORING</string>
+    <string name="stetoscope" translatable="false">stetoscope</string>
+    <string name="avez_vous_d_j_effectu_un_bilan_cardiaque">Have you ever had a heart checkup?</string>
+    <string name="avez_vous_d_j_consult_un_cardiologue">Have you ever seen a cardiologist?</string>
+    <string name="trois" translatable="false">trois</string>
 </resources>

@@ -12,4 +12,7 @@
     <string name="pr_c_dent">Précédent</string>
     <string name="nom">Nom :</string>
     <string name="je_me_test">Je me test</string>
+    <string name="mon_suivi_cardiaque">MON SUIVI CARDIAQUE</string>
+    <string name="avez_vous_d_j_effectu_un_bilan_cardiaque">Avez-vous déjà effectué un bilan cardiaque ?</string>
+    <string name="avez_vous_d_j_consult_un_cardiologue">Avez-vous déjà consulté un cardiologue ?</string>
 </resources>
