@@ -10,11 +10,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="171dp"
-        android:layout_height="152dp"
-        android:layout_marginEnd="244dp"
+        android:layout_width="142dp"
+        android:layout_height="121dp"
+        android:layout_marginEnd="84dp"
         app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/coeur"
         tools:layout_editor_absoluteY="2dp" />
@@ -39,9 +38,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="92dp" />
+        tools:layout_editor_absoluteY="96dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -50,9 +49,9 @@
         android:text="Avez-vous un problème de cholestérol ?"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="139dp" />
+        tools:layout_editor_absoluteY="150dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -62,9 +61,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="192dp" />
+        tools:layout_editor_absoluteY="198dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -74,9 +73,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="234dp" />
+        tools:layout_editor_absoluteY="240dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -98,42 +97,41 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="368dp" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="122dp"
-        android:layout_height="31dp"
+        android:layout_width="112dp"
+        android:layout_height="29dp"
         android:layout_marginStart="32dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toTopOf="@+id/spinner4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="124dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="112dp"
+        android:layout_width="114dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="96dp"
         android:layout_marginBottom="17dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinner4"
-        android:layout_width="121dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="112dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="10dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toTopOf="@+id/spinner5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,36 +140,38 @@
 
     <Spinner
         android:id="@+id/spinner5"
-        android:layout_width="122dp"
-        android:layout_height="35dp"
+        android:layout_width="102dp"
+        android:layout_height="27dp"
         android:layout_marginStart="172dp"
+        android:layout_marginBottom="33dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toTopOf="@+id/spinner6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/spinner6"
-        android:layout_width="123dp"
-        android:layout_height="27dp"
+        android:layout_width="107dp"
+        android:layout_height="33dp"
         android:layout_marginStart="28dp"
+        android:layout_marginBottom="39dp"
         android:entries="@array/Spiner2_page2"
+        app:layout_constraintBottom_toTopOf="@+id/spinner7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.382"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintStart_toEndOf="@+id/textView7" />
 
     <Spinner
         android:id="@+id/spinner7"
-        android:layout_width="123dp"
-        android:layout_height="33dp"
+        android:layout_width="105dp"
+        android:layout_height="29dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.626"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        tools:layout_editor_absoluteY="362dp" />
+        tools:layout_editor_absoluteY="366dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
