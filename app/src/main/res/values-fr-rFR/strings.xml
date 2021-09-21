@@ -23,4 +23,5 @@
     <string name="hypertension">Avez-vous de l’hypertension ?</string>
     <string name="AVC">Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
     <string name="IMC">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
+    <string name="Coeur">Mon Coeur</string>
 </resources>
