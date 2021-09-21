@@ -13,7 +13,7 @@
         android:layout_width="115dp"
         android:layout_height="96dp"
         android:layout_marginBottom="632dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -89,16 +89,16 @@
 
     <TextView
         android:id="@+id/AVC"
-        android:layout_width="286dp"
-        android:layout_height="164dp"
-        android:layout_marginBottom="148dp"
+        android:layout_width="274dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="196dp"
         android:text="@string/avez_vous_un_parent_du_premier_degr_p_re_m_re_fr_re_ou_s_ur_qui_a_eu_des_probl_mes_cardiaques_infarctus_avc_mort_subite_avant_55_ans_pour_un_homme_ou_avant_65_ans_chez_une_femme"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
@@ -152,7 +152,7 @@
         android:layout_width="104dp"
         android:layout_height="48dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="252dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -161,11 +161,11 @@
         android:id="@+id/spinner7"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="76dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
@@ -183,7 +183,7 @@
         android:id="@+id/IMC"
         android:layout_width="381dp"
         android:layout_height="44dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="136dp"
         android:text="@string/connaissez_vous_votre_indice_de_masse_corporelle_imc"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -191,5 +191,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/precedentpage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/pr_c_dent2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/suivantpage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/suivant2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/coeur"
-        android:layout_width="268dp"
-        android:layout_height="65dp"
+        android:layout_width="264dp"
+        android:layout_height="59dp"
         android:text="@string/mon_coeur"
         android:textColor="#000000"
         android:textSize="48sp"
@@ -41,13 +41,13 @@
         android:id="@+id/prblmcardiaque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/avez_vous_un_probl_me_cardiaque"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/prblmcolesterol"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -58,10 +58,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <TextView
         android:id="@+id/diabetique"
@@ -72,9 +72,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
         android:id="@+id/hypertension"
@@ -85,10 +86,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.751"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
+        app:layout_constraintVertical_bias="0.421" />
+
 
     <TextView
         android:id="@+id/AVC"
@@ -100,19 +102,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
-
+        app:layout_constraintVertical_bias="0.628" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="112dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="68dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toEndOf="@+id/prblmcardiaque"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,10 +122,10 @@
         android:id="@+id/spinner3"
         android:layout_width="114dp"
         android:layout_height="48dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="104dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toEndOf="@+id/prblmcolesterol"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -135,24 +137,21 @@
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toBottomOf="@+id/spinner6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.991"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toEndOf="@+id/diabetique"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Spinner
         android:id="@+id/spinner5"
         android:layout_width="107dp"
         android:layout_height="53dp"
-        android:layout_marginStart="172dp"
         android:layout_marginBottom="33dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toTopOf="@+id/spinner6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/hypertension"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <Spinner
         android:id="@+id/spinner6"
@@ -169,8 +168,8 @@
         android:id="@+id/spinner8"
         android:layout_width="102dp"
         android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="144dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/AVC" />
@@ -183,19 +182,35 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.957" />
+        app:layout_constraintVertical_bias="0.791" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="103dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="72dp"
         android:entries="@array/Spiner2_page2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/precedentpage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pr_c_dent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="359dp" />
+
+    <Button
+        android:id="@+id/suivantpage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suivant"
+        tools:layout_editor_absoluteX="583dp"
+        tools:layout_editor_absoluteY="359dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
