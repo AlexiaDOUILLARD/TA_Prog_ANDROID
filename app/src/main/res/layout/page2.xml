@@ -12,20 +12,23 @@
         android:id="@+id/imageView"
         android:layout_width="171dp"
         android:layout_height="152dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="244dp"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/coeur"
         tools:layout_editor_absoluteY="2dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="390dp"
-        android:layout_height="60dp"
+        android:layout_width="268dp"
+        android:layout_height="65dp"
         android:text="Mon coeur"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="2dp" />
 
     <TextView
