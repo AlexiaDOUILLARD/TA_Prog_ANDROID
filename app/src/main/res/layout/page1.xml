@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="@string/vous_tes"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FBFBFB"
+        android:textColor="#795548"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,8 @@
         app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/deux" />
+        app:srcCompat="@drawable/deux"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView4"
@@ -78,7 +79,7 @@
         android:layout_marginBottom="300dp"
         android:text="@string/quel_ge_avez_vous"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FAFAFA"
+        android:textColor="#795548"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,9 +121,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Un homme"
+            android:text="@string/un_homme"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#F6F0F0"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -131,9 +132,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Une femme"
+            android:text="@string/une_femme"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#FBF6F6"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RadioGroup>
@@ -154,9 +155,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Moins de 40ans"
+            android:text="@string/moins_de_40ans"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#F6F2F2"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -165,8 +166,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Entre 40 et 60ans"
-            android:textColor="#FAF9F9"
+            android:text="@string/entre_40_et_60ans"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -175,10 +176,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="Plus de 60 ans"
-            android:textColor="#F8F6F6"
+            android:text="@string/plus_de_60_ans"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/bouton_precedent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="#0C0C0C"
+        android:backgroundTint="#070707"
+        android:text="@string/pr_c_dent"
+        android:textColor="#F6F3F3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

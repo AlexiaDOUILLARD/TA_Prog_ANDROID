@@ -52,7 +52,7 @@
         android:layout_marginTop="12dp"
         android:text="@string/vous_tes"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FBFBFB"
+        android:textColor="#795548"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,8 @@
         app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/deux" />
+        app:srcCompat="@drawable/deux"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView4"
@@ -78,7 +79,7 @@
         android:layout_height="wrap_content"
         android:text="@string/quel_ge_avez_vous"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FAFAFA"
+        android:textColor="#795548"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,8 +116,9 @@
             android:id="@+id/sexe_homme2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Un homme"
-            android:textColor="#FFFFFF"
+            android:minHeight="48dp"
+            android:text="@string/un_homme"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -124,16 +126,18 @@
             android:id="@+id/sexe_femme2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Une femme"
-            android:textColor="#FDFBFB"
+            android:minHeight="48dp"
+            android:text="@string/une_femme"
+            android:textColor="#795548"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RadioGroup>
 
     <RadioGroup
-        android:layout_width="240dp"
-        android:layout_height="102dp"
+        android:layout_width="242dp"
+        android:layout_height="140dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.56"
@@ -144,8 +148,9 @@
             android:id="@+id/radioButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Moins de 40 ans"
-            android:textColor="#FBF9F9"
+            android:minHeight="48dp"
+            android:text="@string/moins_de_40ans"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -153,9 +158,10 @@
             android:id="@+id/radioButton7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Entre 40 et 60 ans"
+            android:minHeight="48dp"
+            android:text="@string/entre_40_et_60ans"
             android:textAllCaps="false"
-            android:textColor="#FAF8F8"
+            android:textColor="#795548"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -163,10 +169,30 @@
             android:id="@+id/radioButton8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Plus de 60 ans"
-            android:textColor="#F8F5F5"
+            android:minHeight="48dp"
+            android:text="@string/plus_de_60_ans"
+            android:textColor="#795548"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0C0C0C"
+        android:backgroundTint="#090808"
+        android:text="@string/pr_c_dent"
+        android:textAllCaps="true"
+        android:textColor="#F1ECEC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

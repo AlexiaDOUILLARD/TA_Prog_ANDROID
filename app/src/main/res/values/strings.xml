@@ -1,15 +1,19 @@
 <resources>
     <string name="app_name" translatable="false">TA_Prog_ANDROID</string>
     <string name="mon_profil">MY PROFILE</string>
-    <string name="un_homme">A man</string>
     <string name="quel_ge_avez_vous">How old are you ?</string>
     <string name="suivant">Next</string>
-    <string name="une_femme">A woman</string>
     <string name="vous_tes">You are :</string>
-    <string name="moins_de_40_ans">Under 40</string>
-    <string name="entre_40_et_60_ans">Between 40 and 60 years old</string>
-    <string name="plus_de_60_ans">Over 60</string>
     <string name="profil_logo" translatable="false">profil_logo</string>
     <string name="question_1" translatable="false">question_1</string>
     <string name="question_2" translatable="false">question_2</string>
+    <string name="un_homme">A man</string>
+    <string name="une_femme">A woman</string>
+    <string name="moins_de_40ans">Under 40</string>
+    <string name="entre_40_et_60ans">Between 40 and 60 years old</string>
+    <string name="plus_de_60_ans">Over 60 years</string>
+    <string name="pr_c_dent">Previous</string>
+    <string name="image_daccueil" translatable="false" />
+    <string name="nom">Name :</string>
+    <string name="je_me_test">I test myself</string>
 </resources>

@@ -8,11 +8,12 @@
 
     <ImageView
         android:id="@+id/Pageacceuil_Image"
-        android:layout_width="349dp"
+        android:layout_width="300dp"
         android:layout_height="206dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:contentDescription="@string/image_daccueil"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/comment_va_votre_coeur" />
@@ -21,12 +22,12 @@
         android:id="@+id/Pageacceuil_NOM"
         android:layout_width="101dp"
         android:layout_height="50dp"
-        android:layout_marginTop="97dp"
         android:text="@string/nom"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pageacceuil_Image" />
+        app:layout_constraintTop_toTopOf="@+id/Pageacceuil_Image" />
 
     <Button
         android:id="@+id/Pageacceuil_button_test"
@@ -37,19 +38,21 @@
         android:textColor="#795548"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Pageacceuil_Champsnom"
         android:layout_width="378dp"
         android:layout_height="64dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Pageacceuil_NOM"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
