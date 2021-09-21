@@ -17,4 +17,10 @@
     <string name="avez_vous_d_j_consult_un_cardiologue">Avez-vous déjà consulté un cardiologue ?</string>
     <string name="msg_error">erreur</string>
     <string name="point_coeur">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
+    <string name="prblm_cardiaque">Avez-vous un problème cardiaque ?</string>
+    <string name="prblm_cholesterol">Avez-vous un problème de cholestérol ?</string>
+    <string name="diabetique">Êtes-vous diabétique ?</string>
+    <string name="hypertension">Avez-vous de l’hypertension ?</string>
+    <string name="AVC">Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
+    <string name="IMC">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
 </resources>

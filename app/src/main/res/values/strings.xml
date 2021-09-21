@@ -23,4 +23,10 @@
     <string name="trois" translatable="false">trois</string>
     <string name="msg_error">error</string>
     <string name="point_coeur">Have you already reviewed your cardiovascular risk with your doctor?</string>
+    <string name="prblm_cardiaque">Do you have a heart problem?</string>
+    <string name="prblm_cholesterol">Do you have a cholesterol problem?</string>
+    <string name="diabetique">Are you diabetic?</string>
+    <string name="hypertension">Do you have high blood pressure?</string>
+    <string name="AVC">Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?</string>
+    <string name="IMC">Do you know your body mass index (BMI)?</string>
 </resources>
