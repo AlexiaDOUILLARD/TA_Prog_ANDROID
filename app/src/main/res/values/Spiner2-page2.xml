@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Spiner2_page2"   >
+        <item> Oui</item>
+        <item> Non </item>
+        <item> Je ne sais pas </item>
+    </string-array>
+
+
+</resources>
