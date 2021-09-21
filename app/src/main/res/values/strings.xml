@@ -16,11 +16,4 @@
     <string name="image_daccueil" translatable="false" />
     <string name="nom">Name :</string>
     <string name="je_me_test">I test myself</string>
-    <string name="avez_vous_un_probl_me_cardiaque">Do you have a heart problem?</string>
-    <string name="avez_vous_un_probl_me_de_cholest_rol">Do you have a cholesterol problem?</string>
-    <string name="etes_vous_diab_tique">Are you diabetic?</string>
-    <string name="avez_vous_de_l_hypertension">Do you have high blood pressure?</string>
-    <string name="avez_vous_un_parent_du_premier_degr_p_re_m_re_fr_re_ou_s_ur_qui_a_eu_des_probl_mes_cardiaques_infarctus_avc_mort_subite_avant_55_ans_pour_un_homme_ou_avant_65_ans_chez_une_femme">Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?</string>
-    <string name="connaissez_vous_votre_indice_de_masse_corporelle_imc">Do you know your body mass index (BMI)?</string>
-    <string name="mon_coeur">My heart</string>
 </resources>

@@ -12,11 +12,4 @@
     <string name="pr_c_dent">Précédent</string>
     <string name="nom">Nom :</string>
     <string name="je_me_test">Je me test</string>
-    <string name="avez_vous_un_probl_me_cardiaque">Avez-vous un problème cardiaque ?</string>
-    <string name="avez_vous_un_probl_me_de_cholest_rol">Avez-vous un problème de cholestérol ?</string>
-    <string name="etes_vous_diab_tique">Etes-vous diabétique ?</string>
-    <string name="avez_vous_de_l_hypertension">Avez-vous de l\'hypertension ?</string>
-    <string name="avez_vous_un_parent_du_premier_degr_p_re_m_re_fr_re_ou_s_ur_qui_a_eu_des_probl_mes_cardiaques_infarctus_avc_mort_subite_avant_55_ans_pour_un_homme_ou_avant_65_ans_chez_une_femme">Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
-    <string name="connaissez_vous_votre_indice_de_masse_corporelle_imc">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
-    <string name="mon_coeur">Mon coeur</string>
 </resources>
