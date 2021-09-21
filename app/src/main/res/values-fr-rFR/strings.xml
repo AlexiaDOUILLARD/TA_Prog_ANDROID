@@ -27,4 +27,6 @@
     <string name="Oui">Oui</string>
     <string name="Non">Non</string>
     <string name="Je_ne_sais_pas">Je ne sais pas</string>
+    <string name="default_no">Par défaut non</string>
+    <string name="risk_cardiovascular">Risque cardiovasculaire ?</string>
 </resources>

@@ -33,4 +33,9 @@
     <string name="Oui">Oui</string>
     <string name="Non">No</string>
     <string name="Je_ne_sais_pas">I don\'t know</string>
+    <string name="risk_cardiovascular">Cardiovascular risk ?</string>
+    <string name="default_no">Default no</string>
+    <string name="image_yes" translatable="false">image_yes</string>
+    <string name="image_no" translatable="false">image_no</string>
+    <string name="image_interro" translatable="false">image_interro</string>
 </resources>
