@@ -40,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        tools:text="Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?" />
+        tools:text="@string/point_coeur" />
 
     <ImageView
         android:id="@+id/imageView4"

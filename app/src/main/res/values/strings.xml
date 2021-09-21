@@ -22,4 +22,5 @@
     <string name="avez_vous_d_j_consult_un_cardiologue">Have you ever seen a cardiologist?</string>
     <string name="trois" translatable="false">trois</string>
     <string name="msg_error">error</string>
+    <string name="point_coeur">Have you already reviewed your cardiovascular risk with your doctor?</string>
 </resources>

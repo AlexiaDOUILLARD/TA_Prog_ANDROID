@@ -16,4 +16,5 @@
     <string name="avez_vous_d_j_effectu_un_bilan_cardiaque">Avez-vous déjà effectué un bilan cardiaque ?</string>
     <string name="avez_vous_d_j_consult_un_cardiologue">Avez-vous déjà consulté un cardiologue ?</string>
     <string name="msg_error">erreur</string>
+    <string name="point_coeur">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
 </resources>
