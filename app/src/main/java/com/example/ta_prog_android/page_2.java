@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class page_2 extends AppCompatActivity {
-    private Button suivantpage2;
-    private Button precedentpage2;
+    private Button suivantpage2, precedentpage2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
+
         suivantpage2 = findViewById(R.id.suivantpage2);
         precedentpage2 = findViewById(R.id.precedentpage2);
 
