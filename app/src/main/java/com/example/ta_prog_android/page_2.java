@@ -18,7 +18,7 @@ public class page_2 extends AppCompatActivity {
         suivantpage2 = findViewById(R.id.suivantpage2);
         precedentpage2 = findViewById(R.id.precedentpage2);
 
-        /** Permet de passer de la page 2 à la page 3**/
+        /** Permet de passer de la page 2 à la page 3 **/
         suivantpage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
