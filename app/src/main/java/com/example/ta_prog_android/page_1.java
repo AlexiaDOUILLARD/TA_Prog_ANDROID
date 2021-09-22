@@ -17,6 +17,7 @@ public class page_1 extends AppCompatActivity {
         setContentView(R.layout.activity_page_1);
         Suivant_1 = findViewById(R.id.Suivant_1);
 
+        /** Bouton pour passer de la page 1 a 2 **/
         Suivant_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(page_1.this, page_2.class);
