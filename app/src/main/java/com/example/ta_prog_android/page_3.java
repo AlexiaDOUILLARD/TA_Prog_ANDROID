@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.Switch;
-
+@SuppressWarnings("FieldCanBeLocal")
 public class page_3 extends AppCompatActivity {
     private ScrollView scrollView2;
     private EditText editTextTextPersonName2;
@@ -25,13 +25,10 @@ public class page_3 extends AppCompatActivity {
         setContentView(R.layout.activity_page3);
         buttonpage3prec = findViewById(R.id.buttonpage3prec);
 
-        /** Permet de passer de la page 3 à la page 2**/
-        buttonpage3prec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(page_3.this, page_2.class);
-                page_3.this.startActivity(intent);
-            }
+        // Pour de passer de la page 3 à la page 2**/
+        buttonpage3prec.setOnClickListener(view -> {
+            Intent intent = new Intent(page_3.this, page_2.class);
+            page_3.this.startActivity(intent);
         });
 
 
