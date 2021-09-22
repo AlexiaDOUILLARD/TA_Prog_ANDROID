@@ -106,7 +106,7 @@
       app:layout_constraintStart_toStartOf="parent" />
 
   <RadioGroup
-      android:id="@+id/radioGroup"
+      android:id="@+id/Group1"
       android:layout_width="237dp"
       android:layout_height="114dp"
       app:layout_constraintBottom_toTopOf="@+id/imageView6"
