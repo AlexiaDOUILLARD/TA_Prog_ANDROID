@@ -21,11 +21,11 @@ public class page_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
 
-        suivantpage2 = findViewById(R.id.suivantpage2);
-        precedentpage2 = findViewById(R.id.precedentpage2);
-        checkBox1_page2 = findViewById(R.id.checkBox1_page2);
-        checkBox2_page2 = findViewById(R.id.checkBox2_page2);
-        checkBox3_page2 = findViewById(R.id.checkBox3_page2);
+//        suivantpage2 = findViewById(R.id.suivantpage2);
+//        precedentpage2 = findViewById(R.id.precedentpage2);
+//        checkBox1_page2 = findViewById(R.id.checkBox1_page2);
+//        checkBox2_page2 = findViewById(R.id.checkBox2_page2);
+//        checkBox3_page2 = findViewById(R.id.checkBox3_page2);
 
 
 
