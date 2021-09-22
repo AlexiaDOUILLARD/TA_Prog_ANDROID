@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +22,6 @@ public class page_3 extends AppCompatActivity {
     boolean clicked_yes = false; // booléen pour l'image bouton Yes
     boolean clicked_no = false; // booléen pour l'image bouton Non
     boolean clicked_intero = false; // // booléen pour l'image bouton Je sais pas
-    private TextView textView14; // correspond à la première question
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,6 @@ public class page_3 extends AppCompatActivity {
         imageButton = findViewById(R.id.imageButton);
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton3 = findViewById(R.id.imageButton3);
-        textView14 = findViewById(R.id.textView14);
 
         // Pour de passer de la page 3 à la page 2
         buttonpage3prec.setOnClickListener(view -> {
@@ -80,7 +78,7 @@ public class page_3 extends AppCompatActivity {
         }
 
         if ((!clicked_yes) && (!clicked_no) && (!clicked_intero)   ) {
-            textView14.setError("please answer this question by clicking a button");
+            Toast.makeText(page_3.this, "Please answer the last question by choosing a button", Toast.LENGTH_LONG).show();
             return false;
         }
         // after all validation return true.
