@@ -14,20 +14,18 @@ public class MainActivity extends AppCompatActivity {
 
     public static String TAG = "Accueil"; // Identifiant pour les messages de log
     private EditText Pageacceuil_Champsnom; // Boite de saisie du nom
-    private Button Pageacceuil_button_test; // Bouton lancement app
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Pageacceuil_button_test = findViewById(R.id.Pageacceuil_button_test);
+        // Bouton lancement app
+        Button pageacceuil_button_test = findViewById(R.id.Pageacceuil_button_test);
 
-        Pageacceuil_button_test.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, page_1.class);
-                MainActivity.this.startActivity(intent);
-            }
+        pageacceuil_button_test.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, page_1.class);
+            MainActivity.this.startActivity(intent);
         });
     }
 }
