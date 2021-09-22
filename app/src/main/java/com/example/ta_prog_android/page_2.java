@@ -45,19 +45,18 @@ public class page_2 extends AppCompatActivity {
     }
 
     //Fonction pour cocher une seul check box à la fois
-    public void CheckBox_control (View v ){
-        if (checkBox1_page2.isSelected(){
-            checkBox2_page2.setSelected(false);
-            checkBox3_page2.setSelected(false);
-
-        }else if (checkBox2_page2.isSelected()){
-            checkBox1_page2.setSelected(false);
-            checkBox3_page2.setSelected(false);
-        }else{
-            checkBox1_page2.setSelected(false);
-            checkBox2_page2.setSelected(false);
+//    public void CheckBox_control (View v ){
+//        if (checkBox1_page2.isSelected(){
+//            checkBox2_page2.setSelected(false);
+//            checkBox3_page2.setSelected(false);
+//
+//        }else if (checkBox2_page2.isSelected()){
+//            checkBox1_page2.setSelected(false);
+//            checkBox3_page2.setSelected(false);
+//        }else{
+//            checkBox1_page2.setSelected(false);
+//            checkBox2_page2.setSelected(false);
 
         }
-    }
+    //}
 
-}

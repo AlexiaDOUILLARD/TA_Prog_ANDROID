@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -17,17 +14,15 @@ import java.util.List;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class page_3 extends AppCompatActivity {
-    private ScrollView scrollView2;
-    private EditText editTextTextPersonName2;
-    private Switch switch2;
-    private ImageButton imageButton, imageButton2, imageButton3;
-    private Button button,button3;
-    private Button buttonpage3prec;
-    boolean isAllFieldsChecked = false;
-    boolean clicked_yes = false;
-    boolean clicked_no = false;
-    boolean clicked_intero = false;
-    private TextView textView14;
+    private EditText editTextTextPersonName2; // champs texte
+    private ImageButton imageButton, imageButton2, imageButton3; // boutons des images
+    private Button button3; // bouton page suivante
+    private Button buttonpage3prec; // bouton page précédente
+    boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
+    boolean clicked_yes = false; // booléen pour l'image bouton Yes
+    boolean clicked_no = false; // booléen pour l'image bouton Non
+    boolean clicked_intero = false; // // booléen pour l'image bouton Je sais pas
+    private TextView textView14; // correspond à la première question
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +31,18 @@ public class page_3 extends AppCompatActivity {
         buttonpage3prec = findViewById(R.id.buttonpage3prec);
         button3 = findViewById(R.id.button3);
         editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
-        switch2 = findViewById(R.id.switch2);
         imageButton = findViewById(R.id.imageButton);
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton3 = findViewById(R.id.imageButton3);
         textView14 = findViewById(R.id.textView14);
 
-        // Pour de passer de la page 3 à la page 2**/
+        // Pour de passer de la page 3 à la page 2
         buttonpage3prec.setOnClickListener(view -> {
             Intent intent = new Intent(page_3.this, page_2.class);
             page_3.this.startActivity(intent);
         });
 
+        // Pour de passer de la page 3 à la page 4
         button3.setOnClickListener(view -> {
             isAllFieldsChecked = CheckAllFields();
             if (isAllFieldsChecked) {
@@ -56,6 +51,7 @@ public class page_3 extends AppCompatActivity {
             }
         });
 
+        // Listener sur les 3 images boutons
         imageButton.setOnClickListener(v -> {
             //change boolean value
             clicked_yes=true;
@@ -72,6 +68,7 @@ public class page_3 extends AppCompatActivity {
         });
     }
 
+    // fonction qui retourne un booléan permettant de vérifier que chacun des champs de la page sont remplis / checked
     private boolean CheckAllFields() {
         if (editTextTextPersonName2.length() == 0) {
             editTextTextPersonName2.setError("This field is required");
@@ -90,12 +87,10 @@ public class page_3 extends AppCompatActivity {
         return true;
     }
 
+    // fonction qui retourne un booléen permettant de vérifier que le champs texte contient la réponse oui/non et pas autre chose
     private boolean verification_texte (){
         String s = editTextTextPersonName2.getText().toString();
         List<String> ma_liste = Arrays.asList("Oui", "Non", "oui","non","Yes","No","yes","no");
-        if (ma_liste.contains(s)) {
-            return true;
-        }
-        return false;
+        return ma_liste.contains(s);
     }
 }
