@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class page_1 extends AppCompatActivity {
 
+    private Person person;
+    private static final String TAG = "Page_1 Stat :";
     boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
     private RadioGroup Group1,Groupe_age;
     @Override
@@ -21,13 +24,32 @@ public class page_1 extends AppCompatActivity {
         Button bouton_precedent = findViewById(R.id.bouton_precedent);
         Group1 = findViewById(R.id.Group1);
         Groupe_age = findViewById(R.id.Groupe_age);
-
+        person = new Person();
+        processIntentData();
 
         //Bouton pour passer de la page 1 a 2
         suivant_1.setOnClickListener(v -> {
             isAllFieldsChecked = CheckAllFields();
             if (isAllFieldsChecked) {
+                int g = Group1.getCheckedRadioButtonId();
+                    if (g == 0){
+                        person.setGenre(Genre.values()[0]);
+                    }
+                    else if (g == 1) {
+                        person.setGenre(Genre.values()[1]);
+                    }
+                int a = Groupe_age.getCheckedRadioButtonId();
+                    if (a == 0){
+                        person.setAge(Age.values()[0]);
+                    }
+                    else if (a == 1) {
+                        person.setAge(Age.values()[1]);
+                    }
+                    else if (a == 2) {
+                        person.setAge(Age.values()[2]);
+                    }
                 Intent intent = new Intent(page_1.this, page_2.class);
+                intent.putExtra("FromAccueilToPage1", this.person);
                 page_1.this.startActivity(intent);
             }
         });
@@ -40,6 +62,27 @@ public class page_1 extends AppCompatActivity {
 
     }
 
+    // This method (whose name is abritrary) is called by onCreate().
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+        // intent may store different data. To get the one matching the Person class,
+        // we need the key "FromActivity1ToActivity2" which was used for transfer
+        // No need to calls "new()" for allocating memory to transferredPerson
+            Person transferredPerson = intent.getParcelableExtra("FromAccueilToPage1");
+            if (transferredPerson != null) {
+                transferredPerson.print();
+            }
+            else {
+                Log.d(page_1.TAG, "No Person found after transfer from Activity1");
+            }
+        }
+        else {
+            Log.d(page_1.TAG, "Error when transferring from Activity1");
+        }
+    }
+
+
     private boolean CheckAllFields() {
         if (Group1.getCheckedRadioButtonId() == -1) {
             Toast.makeText(page_1.this, "please answer this question by clicking a button", Toast.LENGTH_LONG).show();
@@ -51,6 +94,30 @@ public class page_1 extends AppCompatActivity {
         }
         // after all validation return true.
         return true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG,"onPause :" );
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG,"onStart :" );
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"onDestroy :" );
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG,"onResume :" );
     }
 
 }
