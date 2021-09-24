@@ -4,39 +4,40 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 enum Genre {
-    MAN,
-    WOMAN,
-    UNDEFINED
+    HOMME,
+    FEMME,
+    NON_DEFINIS
 }
 
-enum IMC {
-    YES,
-    NO,
-    OTHER,
-    UNDEFINED
+enum YES_NO {
+    OUI,
+    NON,
+    NE_SAIT_PAS,
+    NON_DEFINIS
 }
 
 enum Age {
     MOINS_40_ANS,
     ENTRE_40_60_ANS,
     PLUS_60_ANS,
-    UNDEFINED
+    NON_DEFINIS
 }
+
 
 public class Person implements Parcelable{
     private String name;
     private Genre genre;
     private Age age;
     public static final String DEFAULT_NAME = "UNDEFINED";
-    private Boolean cardiacProblem;
-    private Boolean cholesterolProblem;
-    private Boolean diabetesProblem;
-    private Boolean hypertensionProblem;
-    private Boolean familyHeartProblem;
-    private IMC imc;
+    private YES_NO cardiacProblem;
+    private YES_NO cholesterolProblem;
+    private YES_NO diabetesProblem;
+    private YES_NO hypertensionProblem;
+    private YES_NO familyHeartProblem;
+    private YES_NO imc;
     private Boolean discussWithDoctor;
     private Boolean cardiacCheckUp;
-    private Boolean consultCardiologist;
+    private YES_NO consultCardiologist;
 
 
     /**
@@ -44,17 +45,17 @@ public class Person implements Parcelable{
      */
     public Person() {
         this.setName(Person.DEFAULT_NAME);
-        this.setGenre(Genre.UNDEFINED);
-        this.setAge(Age.UNDEFINED);
-        this.setCardiacProblem(false);
-        this.setCholesterolProblem(false);
-        this.setDiabetesProblem(false);
-        this.setHypertensionProblem(false);
-        this.setFamilyHeartProblem(false);
-        this.setImc(IMC.UNDEFINED);
+        this.setGenre(Genre.NON_DEFINIS);
+        this.setAge(Age.NON_DEFINIS);
+        this.setCardiacProblem(YES_NO.NON_DEFINIS);
+        this.setCholesterolProblem(YES_NO.NON_DEFINIS);
+        this.setDiabetesProblem(YES_NO.NON_DEFINIS);
+        this.setHypertensionProblem(YES_NO.NON_DEFINIS);
+        this.setFamilyHeartProblem(YES_NO.NON_DEFINIS);
+        this.setImc(YES_NO.NON_DEFINIS);
         this.setDiscussWithDoctor(false);
         this.setCardiacCheckUp(false);
-        this.setConsultCardiologist(false);
+        this.setConsultCardiologist(YES_NO.NON_DEFINIS);
     }
     /**
      * @return the description of this class as a String
@@ -99,39 +100,39 @@ public class Person implements Parcelable{
 
     public void setAge(Age anAge) { this.age = anAge; }
 
-    public Boolean getCholesterolProblem() { return this.cholesterolProblem; }
+    public YES_NO getCholesterolProblem() { return this.cholesterolProblem; }
 
-    public void setCholesterolProblem(Boolean aCholesterolProblem) {
+    public void setCholesterolProblem(YES_NO aCholesterolProblem) {
         this.cholesterolProblem = aCholesterolProblem;
     }
 
-    public Boolean getCardiacProblem() { return this.cardiacProblem; }
+    public YES_NO getCardiacProblem() { return this.cardiacProblem; }
 
-    public void setCardiacProblem(Boolean aCardiacProblem) {
+    public void setCardiacProblem(YES_NO aCardiacProblem) {
         this.cardiacProblem = aCardiacProblem;
     }
 
-    public Boolean getDiabetesProblem() { return this.diabetesProblem; }
+    public YES_NO getDiabetesProblem() { return this.diabetesProblem; }
 
-    public void setDiabetesProblem(Boolean aDiabetesProblem) {
+    public void setDiabetesProblem(YES_NO aDiabetesProblem) {
         this.diabetesProblem = aDiabetesProblem;
     }
 
-    public Boolean getHypertensionProblem() { return this.hypertensionProblem; }
+    public YES_NO getHypertensionProblem() { return this.hypertensionProblem; }
 
-    public void setHypertensionProblem(Boolean aHypertensionProblem) {
+    public void setHypertensionProblem(YES_NO aHypertensionProblem) {
         this.hypertensionProblem = aHypertensionProblem;
     }
 
-    public Boolean getFamilyHeartProblem() { return this.familyHeartProblem; }
+    public YES_NO getFamilyHeartProblem() { return this.familyHeartProblem; }
 
-    public void setFamilyHeartProblem(Boolean aFamilyHeartProblem) {
+    public void setFamilyHeartProblem(YES_NO aFamilyHeartProblem) {
         this.familyHeartProblem = aFamilyHeartProblem;
     }
 
-    public IMC getImc() { return this.imc; }
+    public YES_NO getImc() { return this.imc; }
 
-    public void setImc(IMC aImc) { this.imc = aImc; }
+    public void setImc(YES_NO aImc) { this.imc = aImc; }
 
     public Boolean getDiscussWithDoctor() { return this.discussWithDoctor; }
 
@@ -145,9 +146,9 @@ public class Person implements Parcelable{
         this.cardiacCheckUp = aCardiacCheckUp;
     }
 
-    public Boolean getConsultCardiologist() { return this.consultCardiologist; }
+    public YES_NO getConsultCardiologist() { return this.consultCardiologist; }
 
-    public void setConsultCardiologist(Boolean aConsultCardiologist) {
+    public void setConsultCardiologist(YES_NO aConsultCardiologist) {
         this.consultCardiologist = aConsultCardiologist;
     }
 
@@ -161,15 +162,15 @@ public class Person implements Parcelable{
         dest.writeString(this.getName());
         dest.writeInt(this.getGenre().ordinal());
         dest.writeInt(this.getAge().ordinal());
-        dest.writeBoolean(this.getCardiacProblem());
-        dest.writeBoolean(this.getCholesterolProblem());
-        dest.writeBoolean(this.getDiabetesProblem());
-        dest.writeBoolean(this.getHypertensionProblem());
-        dest.writeBoolean(this.getFamilyHeartProblem());
+        dest.writeInt(this.getCardiacProblem().ordinal());
+        dest.writeInt(this.getCholesterolProblem().ordinal());
+        dest.writeInt(this.getDiabetesProblem().ordinal());
+        dest.writeInt(this.getHypertensionProblem().ordinal());
+        dest.writeInt(this.getFamilyHeartProblem().ordinal());
         dest.writeInt(this.getImc().ordinal());
         dest.writeBoolean(this.getDiscussWithDoctor());
         dest.writeBoolean(this.getCardiacCheckUp());
-        dest.writeBoolean(this.getConsultCardiologist());
+        dest.writeInt(this.getConsultCardiologist().ordinal());
     }
     /**
      * https://developer.android.com/reference/android/os/Parcelable#java
@@ -191,15 +192,15 @@ public class Person implements Parcelable{
         this.setName(in.readString());
         this.setGenre(Genre.values()[in.readInt()]);
         this.setAge(Age.values()[in.readInt()]);
-        this.setCardiacProblem(in.readBoolean());
-        this.setCholesterolProblem(in.readBoolean());
-        this.setDiabetesProblem(in.readBoolean());
-        this.setHypertensionProblem(in.readBoolean());
-        this.setFamilyHeartProblem(in.readBoolean());
-        this.setImc(IMC.values()[in.readInt()]);
+        this.setCardiacProblem(YES_NO.values()[in.readInt()]);
+        this.setCholesterolProblem(YES_NO.values()[in.readInt()]);
+        this.setDiabetesProblem(YES_NO.values()[in.readInt()]);
+        this.setHypertensionProblem(YES_NO.values()[in.readInt()]);
+        this.setFamilyHeartProblem(YES_NO.values()[in.readInt()]);
+        this.setImc(YES_NO.values()[in.readInt()]);
         this.setDiscussWithDoctor(in.readBoolean());
         this.setCardiacCheckUp(in.readBoolean());
-        this.setConsultCardiologist(in.readBoolean());
+        this.setConsultCardiologist(YES_NO.values()[in.readInt()]);
     }
 }
 

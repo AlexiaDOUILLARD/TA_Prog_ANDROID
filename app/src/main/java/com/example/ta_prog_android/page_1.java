@@ -15,6 +15,7 @@ public class page_1 extends AppCompatActivity {
     private static final String TAG = "Page_1 Stat :";
     boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
     private RadioGroup Group1,Groupe_age;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,32 +25,34 @@ public class page_1 extends AppCompatActivity {
         Button bouton_precedent = findViewById(R.id.bouton_precedent);
         Group1 = findViewById(R.id.Group1);
         Groupe_age = findViewById(R.id.Groupe_age);
-        person = new Person();
+        person = getIntent().getParcelableExtra("FromAccueilToPage1");
+
         processIntentData();
 
         //Bouton pour passer de la page 1 a 2
         suivant_1.setOnClickListener(v -> {
             isAllFieldsChecked = CheckAllFields();
             if (isAllFieldsChecked) {
-                int g = Group1.getCheckedRadioButtonId();
-                    if (g == 0){
-                        person.setGenre(Genre.values()[0]);
-                    }
-                    else if (g == 1) {
-                        person.setGenre(Genre.values()[1]);
-                    }
-                int a = Groupe_age.getCheckedRadioButtonId();
-                    if (a == 0){
-                        person.setAge(Age.values()[0]);
-                    }
-                    else if (a == 1) {
-                        person.setAge(Age.values()[1]);
-                    }
-                    else if (a == 2) {
-                        person.setAge(Age.values()[2]);
-                    }
+                int sex = Group1.getCheckedRadioButtonId();
+                int age = Groupe_age.getCheckedRadioButtonId();
+                if (sex == R.id.sexe_homme) {
+                    person.setGenre(Genre.values()[0]);
+                }
+                if (sex == R.id.sexe_femme) {
+                    person.setGenre(Genre.values()[1]);
+                }
+                if (age == R.id.moins_40) {
+                    person.setAge(Age.values()[0]);
+                }
+                if (age == R.id.entre_40_60) {
+                    person.setAge(Age.values()[1]);
+                }
+                if (age == R.id.Plus_60) {
+                    person.setAge(Age.values()[2]);
+                }
+
                 Intent intent = new Intent(page_1.this, page_2.class);
-                intent.putExtra("FromAccueilToPage1", this.person);
+                intent.putExtra("FromPage1ToPage2", this.person);
                 page_1.this.startActivity(intent);
             }
         });
