@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class page_1 extends AppCompatActivity {
     private static final String TAG = "Page_1 Stat :";
     boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
     private RadioGroup Group1,Groupe_age;
+    private RadioButton sexe_homme, sexe_femme,moins_40,entre_40_60,Plus_60;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,8 @@ public class page_1 extends AppCompatActivity {
         Button bouton_precedent = findViewById(R.id.bouton_precedent);
         Group1 = findViewById(R.id.Group1);
         Groupe_age = findViewById(R.id.Groupe_age);
-        person = getIntent().getParcelableExtra("FromAccueilToPage1");
 
+        person = getIntent().getParcelableExtra("FromAccueilToPage1");
         processIntentData();
 
         //Bouton pour passer de la page 1 a 2
@@ -60,6 +62,7 @@ public class page_1 extends AppCompatActivity {
         // Permet de passer de la page 1 à la page accueil
         bouton_precedent.setOnClickListener(view -> {
             Intent intent = new Intent(page_1.this, MainActivity.class);
+            intent.putExtra("FromPage1toAcceuil",this.person);
             page_1.this.startActivity(intent);
         });
 
@@ -74,7 +77,7 @@ public class page_1 extends AppCompatActivity {
         // No need to calls "new()" for allocating memory to transferredPerson
             Person transferredPerson = intent.getParcelableExtra("FromAccueilToPage1");
             if (transferredPerson != null) {
-                transferredPerson.print();
+                    transferredPerson.print();
             }
             else {
                 Log.d(page_1.TAG, "No Person found after transfer from Activity1");

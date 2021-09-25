@@ -18,16 +18,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        person = new Person();
         setContentView(R.layout.activity_main);
         Pageacceuil_Champsnom = findViewById(R.id.Pageacceuil_Champsnom);
 
         // Bouton lancement app
         Button pageacceuil_button_test = findViewById(R.id.Pageacceuil_button_test);
+        person = getIntent().getParcelableExtra("FromPage1toAcceuil");
+        processIntentData();
 
         pageacceuil_button_test.setOnClickListener(v -> {
             isAllFieldsChecked = CheckAllFields();
             if (isAllFieldsChecked) {
+                person = new Person();
                 String n = Pageacceuil_Champsnom.getText().toString();
                 person.setName(n);
                 Intent intent = new Intent(MainActivity.this, page_1.class);
@@ -35,6 +37,26 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
             }
         });
+    }
+    // This method (whose name is abritrary) is called by onCreate().
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            // intent may store different data. To get the one matching the Person class,
+            // we need the key "FromActivity1ToActivity2" which was used for transfer
+            // No need to calls "new()" for allocating memory to transferredPerson
+            Person transferredPerson = intent.getParcelableExtra("FromPage1toAcceuil");
+            if (transferredPerson != null) {
+                transferredPerson.print();
+                Pageacceuil_Champsnom.setText(person.getName());
+            }
+            else {
+                Log.d(MainActivity.TAG, "No Person found after transfer from Activity1");
+            }
+        }
+        else {
+            Log.d(MainActivity.TAG, "Error when transferring from Activity1");
+        }
     }
 
     private boolean CheckAllFields() {
