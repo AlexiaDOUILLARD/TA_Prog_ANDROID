@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +14,9 @@ public class page_2 extends AppCompatActivity {
     private CheckBox checkBox1_page2;
     private CheckBox checkBox2_page2;
     private CheckBox checkBox3_page2;
-    private Boolean BooleanCheck = false;
-    private Boolean BooleanCheck2 = false;
-    private Boolean BooleanCheck3 = false;
+    boolean BooleanCheck = false;
+    boolean BooleanCheck2 = false;
+    boolean BooleanCheck3 = false;
 
 
     @Override
@@ -65,8 +66,8 @@ public class page_2 extends AppCompatActivity {
     }
 
     //Fonction pour cocher une seul check box à la fois
-    public Boolean CheckBox_control () {
-        if (BooleanCheck = true) {
+    private boolean CheckBox_control () {
+        if (checkBox1_page2.isChecked()) {
             checkBox2_page2.setSelected(false);
             BooleanCheck2 = false;
             checkBox3_page2.setSelected(false);
@@ -74,20 +75,25 @@ public class page_2 extends AppCompatActivity {
             return false;
 
         }
-        if (BooleanCheck2 = true) {
+        if (checkBox2_page2.isChecked()) {
             checkBox1_page2.setSelected(false);
             BooleanCheck = false;
             checkBox3_page2.setSelected(false);
             BooleanCheck3 =false;
             return false;
         }
-        if (BooleanCheck3 = true) {
+        if (checkBox3_page2.isChecked()) {
             checkBox1_page2.setSelected(false);
             BooleanCheck = false;
             checkBox2_page2.setSelected(false);
             BooleanCheck2 = false;
             return false;
 
+        }
+        //Vérifie que au moins une CheckBox est rempli
+        if(!BooleanCheck && !BooleanCheck2 && !BooleanCheck3){
+            Toast.makeText(page_2.this, "Please answer the last question by choosing a checkbox", Toast.LENGTH_LONG).show();
+            return false;
         }
         return true;
     }
