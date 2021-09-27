@@ -33,6 +33,7 @@
         android:layout_width="175dp"
         android:layout_height="85dp"
         android:layout_marginBottom="60dp"
+        android:onClick="NextPage"
         android:text="@string/je_me_test"
         android:textColor="#795548"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,12 +45,12 @@
         android:layout_width="378dp"
         android:layout_height="64dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Pageacceuil_NOM"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

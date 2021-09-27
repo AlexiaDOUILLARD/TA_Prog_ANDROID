@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -22,49 +22,65 @@ public class page_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_1);
-
-        Button suivant_1 = findViewById(R.id.Suivant_1);
-        Button bouton_precedent = findViewById(R.id.bouton_precedent);
         Group1 = findViewById(R.id.Group1);
         Groupe_age = findViewById(R.id.Groupe_age);
+        sexe_homme = findViewById(R.id.sexe_homme);
+        sexe_femme = findViewById(R.id.sexe_femme);
+        moins_40 = findViewById(R.id.moins_40);
+        entre_40_60 = findViewById(R.id.entre_40_60);
+        Plus_60 = findViewById(R.id.Plus_60);
 
-        person = getIntent().getParcelableExtra("FromAccueilToPage1");
-        processIntentData();
+        Intent intent = getIntent();
 
-        //Bouton pour passer de la page 1 a 2
-        suivant_1.setOnClickListener(v -> {
-            isAllFieldsChecked = CheckAllFields();
-            if (isAllFieldsChecked) {
-                int sex = Group1.getCheckedRadioButtonId();
-                int age = Groupe_age.getCheckedRadioButtonId();
-                if (sex == R.id.sexe_homme) {
-                    person.setGenre(Genre.values()[0]);
+        if (intent!=null){
+            Person transferredPerson = intent.getParcelableExtra("FromPage0ToPage1");
+            if (transferredPerson !=null) {
+                this.person = transferredPerson;
+                if (!this.person.getGenre().toString().equals("NON_DEFINIS")){
+                    if (this.person.getGenre().toString().equals("HOMME")){
+                        sexe_homme.setChecked(true);
+                    }
+                    else if (this.person.getGenre().toString().equals("FEMME")){
+                        sexe_femme.setChecked(true);
+                    }
+                    else Log.d(TAG, "aucun sexe attribué");
                 }
-                if (sex == R.id.sexe_femme) {
-                    person.setGenre(Genre.values()[1]);
+                if (this.person.getAge().toString().equals("MOINS_40_ANS")){
+                    moins_40.setChecked(true);
                 }
-                if (age == R.id.moins_40) {
-                    person.setAge(Age.values()[0]);
+                else if (this.person.getAge().toString().equals("ENTRE_40_60_ANS")){
+                    entre_40_60.setChecked(true);
                 }
-                if (age == R.id.entre_40_60) {
-                    person.setAge(Age.values()[1]);
-                }
-                if (age == R.id.Plus_60) {
-                    person.setAge(Age.values()[2]);
+                else if (this.person.getAge().toString().equals("PLUS_60_ANS")){
+                    Plus_60.setChecked(true);
                 }
 
-                Intent intent = new Intent(page_1.this, page_2.class);
-                intent.putExtra("FromPage1ToPage2", this.person);
-                page_1.this.startActivity(intent);
             }
-        });
-
-        // Permet de passer de la page 1 à la page accueil
-        bouton_precedent.setOnClickListener(view -> {
-            Intent intent = new Intent(page_1.this, MainActivity.class);
-            intent.putExtra("FromPage1toAcceuil",this.person);
-            page_1.this.startActivity(intent);
-        });
+            else {
+                Person transferredPerson2 = intent.getParcelableExtra("FromPage2ToPage1");
+                if (transferredPerson2 !=null) {
+                    this.person = transferredPerson2;
+                    if (!this.person.getGenre().toString().equals("NON_DEFINIS")){
+                        if (this.person.getGenre().toString().equals("HOMME")){
+                            sexe_homme.setChecked(true);
+                        }
+                        else if (this.person.getGenre().toString().equals("FEMME")){
+                            sexe_femme.setChecked(true);
+                        }
+                        else Log.d(TAG, "aucun sexe attribué");
+                    }
+                    if (this.person.getAge().toString().equals("MOINS_40_ANS")){
+                        moins_40.setChecked(true);
+                    }
+                    else if (this.person.getAge().toString().equals("ENTRE_40_60_ANS")){
+                        entre_40_60.setChecked(true);
+                    }
+                    else if (this.person.getAge().toString().equals("PLUS_60_ANS")){
+                        Plus_60.setChecked(true);
+                    }
+                }
+            }
+        }
 
     }
 
@@ -72,21 +88,54 @@ public class page_1 extends AppCompatActivity {
     private void processIntentData() {
         Intent intent = getIntent();
         if(intent != null) {
-        // intent may store different data. To get the one matching the Person class,
-        // we need the key "FromActivity1ToActivity2" which was used for transfer
-        // No need to calls "new()" for allocating memory to transferredPerson
-            Person transferredPerson = intent.getParcelableExtra("FromAccueilToPage1");
-            if (transferredPerson != null) {
-                    transferredPerson.print();
+            Person transferredPerson = intent.getParcelableExtra("FromPage0ToPage1");
+            if (transferredPerson !=null){
+                this.person = transferredPerson;
+                if (sexe_homme.isChecked()){person.setGenre(Genre.HOMME);}
+                else if (sexe_femme.isChecked()){person.setGenre(Genre.FEMME);}
+                if (moins_40.isChecked()){person.setAge(Age.MOINS_40_ANS);}
+                else if (entre_40_60.isChecked()){person.setAge(Age.ENTRE_40_60_ANS);}
+                else if (Plus_60.isChecked()){person.setAge(Age.PLUS_60_ANS);}
+                Log.d(TAG, person.toString());
             }
             else {
-                Log.d(page_1.TAG, "No Person found after transfer from Activity1");
+                Person transferredPerson2 = intent.getParcelableExtra("FromPage2ToPage1");
+                Log.d(TAG, "No Person found after transfer from Page1");
+                if (transferredPerson2 !=null){
+                    this.person = transferredPerson2;
+                    if (sexe_homme.isChecked()) {person.setGenre(Genre.HOMME);}
+                    else if (sexe_femme.isChecked()){person.setGenre(Genre.FEMME);}
+                    if (moins_40.isChecked()){person.setAge(Age.MOINS_40_ANS);}
+                    else if (entre_40_60.isChecked()){person.setAge(Age.ENTRE_40_60_ANS);}
+                    else if (Plus_60.isChecked()){person.setAge(Age.PLUS_60_ANS);}
+                    Log.d(TAG, person.toString());
+                    Log.d(TAG, " Person found after transfer from Activity3 to 2");
+                }
             }
         }
         else {
-            Log.d(page_1.TAG, "Error when transferring from Activity1");
+            Log.d(page_1.TAG, "Error when transferring from Page1");
         }
     }
+
+    public void PreviousPage(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        processIntentData();
+        intent.putExtra("FromPage1ToPage0", this.person);
+        startActivity(intent);
+    }
+
+    public void NextToPage2(View sender){
+        isAllFieldsChecked = CheckAllFields();
+        if (isAllFieldsChecked) {
+        Intent intent = new Intent(this, page_2.class);
+        processIntentData();
+        intent.putExtra("FromPage1ToPage2", this.person);
+        startActivity(intent);
+        }
+    }
+
+
 
 
     private boolean CheckAllFields() {

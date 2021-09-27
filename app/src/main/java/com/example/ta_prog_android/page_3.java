@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.CompoundButton;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
@@ -22,8 +21,6 @@ public class page_3 extends AppCompatActivity {
     private Person person;
     private EditText editTextTextPersonName2; // champs texte
     private ImageButton imageButton, imageButton2, imageButton3; // boutons des images
-    private Button button3; // bouton page suivante
-    private Button buttonpage3prec; // bouton page précédente
     boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
     boolean clicked_yes = false; // booléen pour l'image bouton Yes
     boolean clicked_no = false; // booléen pour l'image bouton Non
@@ -35,76 +32,80 @@ public class page_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page3);
-        buttonpage3prec = findViewById(R.id.buttonpage3prec);
-        button3 = findViewById(R.id.button3);
         editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
         imageButton = findViewById(R.id.imageButton);
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton3 = findViewById(R.id.imageButton3);
         switch2 = findViewById(R.id.switch2);
 
-        person = getIntent().getParcelableExtra("FromPage2ToPage3");
-        processIntentData();
-
-        // Pour de passer de la page 3 à la page 2
-        buttonpage3prec.setOnClickListener(view -> {
-            Intent intent = new Intent(page_3.this, page_2.class);
-            page_3.this.startActivity(intent);
-        });
-
-        switch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
-                    switcher = true;
-                }
-            }
-        });
-
-        // Pour de passer de la page 3 à la page 4
-        button3.setOnClickListener(view -> {
-            isAllFieldsChecked = CheckAllFields();
-            if (isAllFieldsChecked) {
-                String s = editTextTextPersonName2.getText().toString();
-                if (s.equals("Oui") || s.equals("oui") || s.equals("Yes") || s.equals("yes")){
-                    person.setImc(YES_NO.values()[0]);
-                }
-                if (s.equals("Non") || s.equals("non") || s.equals("No") || s.equals("no")){
-                    person.setImc(YES_NO.values()[1]);
-                }
-                if (switcher) {
-                    person.setCardiacCheckUp(true);
-                }
-                if (clicked_yes){
-                    person.setConsultCardiologist(YES_NO.values()[0]);
-                }
-                if (clicked_no){
-                    person.setConsultCardiologist(YES_NO.values()[1]);
-                }
-                if (clicked_intero){
-                    person.setConsultCardiologist(YES_NO.values()[2]);
-                }
-                Intent intent = new Intent(page_3.this, page_4.class);
-                intent.putExtra("FromPage3ToResults", this.person);
-                page_3.this.startActivity(intent);
+        switch2.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                switcher = true;
             }
         });
 
         // Listener sur les 3 images boutons
         imageButton.setOnClickListener(v -> {
             //change boolean value
-            clicked_yes=true;
+            clicked_yes = true;
         });
 
         imageButton2.setOnClickListener(v -> {
             //change boolean value
-            clicked_no=true;
+            clicked_no = true;
         });
 
         imageButton3.setOnClickListener(v -> {
             //change boolean value
-            clicked_intero=true;
+            clicked_intero = true;
         });
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            Person transferredPerson = intent.getParcelableExtra("FromPage2ToPage3");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                String yes = "Oui";
+                String non = "Non";
+                if (this.person.getDiscussWithDoctor()){
+                    editTextTextPersonName2.setText(yes);
+                } else if (!this.person.getDiscussWithDoctor()){
+                    editTextTextPersonName2.setText(non);
+                }
+                if (this.person.getCardiacCheckUp()){
+                    switch2.setChecked(true);
+                }
+                if (this.person.getConsultCardiologist().toString().equals("OUI")){
+                    imageButton.setSelected(true);
+                } else if (this.person.getConsultCardiologist().toString().equals("NON")){
+                    imageButton2.setSelected(true);
+                } else if (this.person.getConsultCardiologist().toString().equals("NE_SAIT_PAS")){
+                    imageButton3.setSelected(true);
+                }
+            } else {
+                Person transferredPerson2 = intent.getParcelableExtra("FromPage4ToPage3");
+                if (transferredPerson2 != null) {
+                    this.person = transferredPerson2;
+                    String yes = "Oui";
+                    String non = "Non";
+                    if (this.person.getDiscussWithDoctor()){
+                        editTextTextPersonName2.setText(yes);
+                    } else if (!this.person.getDiscussWithDoctor()){
+                        editTextTextPersonName2.setText(non);
+                    }
+                    if (this.person.getCardiacCheckUp()){
+                        switch2.setChecked(true);
+                    }
+                    if (this.person.getConsultCardiologist().toString().equals("OUI")){
+                        imageButton.setSelected(true);
+                    } else if (this.person.getConsultCardiologist().toString().equals("NON")){
+                        imageButton2.setSelected(true);
+                    } else if (this.person.getConsultCardiologist().toString().equals("NE_SAIT_PAS")){
+                        imageButton3.setSelected(true);
+                    }
+                }
+            }
+        }
     }
 
     // fonction qui retourne un booléan permettant de vérifier que chacun des champs de la page sont remplis / checked
@@ -135,20 +136,70 @@ public class page_3 extends AppCompatActivity {
     // This method (whose name is abritrary) is called by onCreate().
     private void processIntentData() {
         Intent intent = getIntent();
-        if(intent != null) {
-            // intent may store different data. To get the one matching the Person class,
-            // we need the key "FromActivity1ToActivity2" which was used for transfer
-            // No need to calls "new()" for allocating memory to transferredPerson
-            Person transferredPerson = intent.getParcelableExtra("FromPage2ToPage3");
-            if (transferredPerson != null) {
-                transferredPerson.print();
+        if (intent != null) {
+            Person transferredPerson3 = intent.getParcelableExtra("FromPage2ToPage3");
+            if (transferredPerson3 !=null){
+                this.person = transferredPerson3;
+                String s = editTextTextPersonName2.getText().toString();
+                if (s.equals("Oui") ||s.equals("oui") ||s.equals("Yes")|| s.equals("yes")){
+                    this.person.setDiscussWithDoctor(true);
+                }
+                else if (switcher){
+                    this.person.setCardiacCheckUp(true);
+                }
+                if (clicked_yes){
+                    this.person.setConsultCardiologist(YES_NO.OUI);
+                } else if (clicked_no){
+                    this.person.setConsultCardiologist(YES_NO.NON);
+                }else if (clicked_intero){
+                    this.person.setConsultCardiologist(YES_NO.NE_SAIT_PAS);
+                }
+                Log.d(TAG, person.toString());
             }
             else {
-                Log.d(page_3.TAG, "No Person found after transfer from Activity1");
+                Person transferredPerson4 = intent.getParcelableExtra("FromPage4ToPage3");
+                Log.d(TAG, "No Person found after transfer from Page3");
+                if (transferredPerson4 !=null){
+                    this.person = transferredPerson4;
+                    String s = editTextTextPersonName2.getText().toString();
+                    if (s.equals("Oui") ||s.equals("oui") ||s.equals("Yes")|| s.equals("yes")){
+                        this.person.setDiscussWithDoctor(true);
+                    }
+                    else if (switcher){
+                        this.person.setCardiacCheckUp(true);
+                    }
+                    if (clicked_yes){
+                        this.person.setConsultCardiologist(YES_NO.OUI);
+                    } else if (clicked_no){
+                        this.person.setConsultCardiologist(YES_NO.NON);
+                    }else if (clicked_intero){
+                        this.person.setConsultCardiologist(YES_NO.NE_SAIT_PAS);
+                    }
+                    Log.d(TAG, person.toString());
+                    Log.d(TAG, "Person found after transfer from Page4 to Page3");
+
+                }
             }
         }
         else {
-            Log.d(page_3.TAG, "Error when transferring from Activity1");
+            Log.d(TAG, "Error when transferring from Page3");
+        }
+    }
+
+    public void PreviousPage2(View view){
+        Intent intent = new Intent(this, page_2.class);
+        processIntentData();
+        intent.putExtra("FromPage3ToPage2", this.person);
+        startActivity(intent);
+    }
+
+    public void NextPageResults(View sender){
+        isAllFieldsChecked = CheckAllFields();
+        if (isAllFieldsChecked) {
+            Intent intent = new Intent(this, page_4.class);
+            processIntentData();
+            intent.putExtra("FromPage3ToPage4", this.person);
+            startActivity(intent);
         }
     }
 }
