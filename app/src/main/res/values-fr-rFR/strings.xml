@@ -30,4 +30,9 @@
     <string name="default_no">Par défaut non</string>
     <string name="risk_cardiovascular">Risque cardiovasculaire ?</string>
     <string name="resultats">MES RESULTATS</string>
+    <string name="VOTRE_FORME_PHYSIQUE">VOTRE FORME PHYSIQUE</string>
+    <string name="intro">Plus le temps passé en surpoids au cours de sa vie est long, plus les facteurs de risques cardio-vasculaires sont présents. Perdre du poids - même un peu et de façon non durable - est bénéfique pour le cœur et les artères, quel que soit l\'âge</string>
+    <string name="taille">Quelle est votre taille ? (en cm)</string>
+    <string name="poids">Quel est votre poids ? (en kg)</string>
+    <string name="sport">Pratiquez-vous une activité physique régulière ?</string>
 </resources>

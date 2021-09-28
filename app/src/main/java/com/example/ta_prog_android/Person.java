@@ -38,6 +38,9 @@ public class Person implements Parcelable{
     private Boolean discussWithDoctor;
     private Boolean cardiacCheckUp;
     private YES_NO consultCardiologist;
+    private int taille;
+    private int poids;
+    private YES_NO sport;
 
 
     /**
@@ -56,6 +59,10 @@ public class Person implements Parcelable{
         this.setDiscussWithDoctor(false);
         this.setCardiacCheckUp(false);
         this.setConsultCardiologist(YES_NO.NON_DEFINIS);
+        this.setTaille(0);
+        this.setPoids(0);
+        this.setSport(YES_NO.NON_DEFINIS);
+
     }
     /**
      * @return the description of this class as a String
@@ -74,6 +81,9 @@ public class Person implements Parcelable{
         sBuilder.append("\t Discuss with doctor: ").append(this.getDiscussWithDoctor()).append("\n");
         sBuilder.append("\t Cardiac Checkup: ").append(this.getCardiacCheckUp()).append("\n");
         sBuilder.append("\t Consult Cardiologist: ").append(this.getConsultCardiologist()).append("\n");
+        sBuilder.append("\t Taille: ").append(this.getTaille()).append("\n");
+        sBuilder.append("\t Poids: ").append(this.getPoids()).append("\n");
+        sBuilder.append("\t Sport: ").append(this.getSport()).append("\n");
         return sBuilder.toString();
     }
     /**
@@ -152,6 +162,29 @@ public class Person implements Parcelable{
         this.consultCardiologist = aConsultCardiologist;
     }
 
+    public int getTaille() {
+        return this.taille;
+    }
+
+    public void setTaille(int ataille) {
+        this.taille = ataille;
+    }
+
+    public int getPoids() {
+        return this.poids;
+    }
+
+    public void setPoids(int apoids) {
+        this.poids = apoids;
+    }
+
+    public YES_NO getSport() {
+        return this.sport;
+    }
+
+    public void setSport(YES_NO asport) {
+        this.sport = asport;
+    }
 
     @Override // Parcelable method
     public int describeContents() { return 0;}
@@ -171,6 +204,9 @@ public class Person implements Parcelable{
         dest.writeBoolean(this.getDiscussWithDoctor());
         dest.writeBoolean(this.getCardiacCheckUp());
         dest.writeInt(this.getConsultCardiologist().ordinal());
+        dest.writeInt(this.getTaille());
+        dest.writeInt(this.getPoids());
+        dest.writeInt(this.getSport().ordinal());
     }
     /**
      * https://developer.android.com/reference/android/os/Parcelable#java
@@ -201,6 +237,9 @@ public class Person implements Parcelable{
         this.setDiscussWithDoctor(in.readBoolean());
         this.setCardiacCheckUp(in.readBoolean());
         this.setConsultCardiologist(YES_NO.values()[in.readInt()]);
+        this.setTaille(in.readInt());
+        this.setPoids(in.readInt());
+        this.setSport(YES_NO.values()[in.readInt()]);
     }
 }
 
