@@ -35,11 +35,5 @@
     <string name="taille">Quelle est votre taille ? (en cm)</string>
     <string name="poids">Quel est votre poids ? (en kg)</string>
     <string name="sport">Pratiquez-vous une activité physique régulière ?</string>
-    <string name="q1">1.</string>
-    <string name="q2">2.</string>
-    <string name="q3">3.</string>
-    <string name="q4">4.</string>
-    <string name="q5">5.</string>
-    <string name="q6">6.</string>
     <string name="intro_result">"Cliquez sur une catégorie pour afficher votre profil cardiaque et nos conseils "</string>
 </resources>

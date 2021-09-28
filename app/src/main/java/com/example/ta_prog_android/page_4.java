@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class page_4 extends AppCompatActivity {
 
@@ -64,11 +65,26 @@ public class page_4 extends AppCompatActivity {
             Log.d(TAG, "Error when transferring from Page3");
         }
 
-        button5.setOnClickListener(view -> clicked_5 = true);
+        button5.setOnClickListener(view -> {
+            clicked_5 = true;
+            clicked_6 = false;
+            clicked_7 = false;
+            displayResults();
+        });
 
-        button6.setOnClickListener(view -> clicked_6 = true);
+        button6.setOnClickListener(view -> {
+            clicked_6 = true;
+            clicked_5 = false;
+            clicked_7 = false;
+            displayResults();
+        });
 
-        button7.setOnClickListener(view -> clicked_7 = true);
+        button7.setOnClickListener(view -> {
+            clicked_7 = true;
+            clicked_6 = false;
+            clicked_5 = false;
+            displayResults();
+        });
 
 
     }
@@ -80,7 +96,6 @@ public class page_4 extends AppCompatActivity {
             if (transferredPerson3 !=null){
                 this.person = transferredPerson3;
                 Log.d(TAG, person.toString());
-                displayResults();
             }
             else {
                 Log.d(page_4.TAG, "No Person found after transfer from Page 5 to Page4");
@@ -173,14 +188,22 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getConsultCardiologist().toString().equals("NON")){
                     conseil3.setText(no.get(8));
                 }
+                question4.setText("");
+                question5.setText("");
+                question6.setText("");
 
             }
             if (clicked_7) {
                 question_1.setText(q.get(9));
                 int poids = person.getPoids();
                 int taille = person.getTaille();
-                int imc = poids / (taille * taille);
-                String i = String.valueOf(imc);
+
+                double taille2 = taille/100.00;
+                double poids2 = Double.parseDouble(String.valueOf(poids));
+                double imc = poids2 / (taille2 * taille2);
+                int a = (int) Math.round(imc);
+
+                String i = String.valueOf(a);
                 result1.setText(i);
                 conseil_1.setText(for_imc.get(0));
                 question_2.setText(q.get(10));
@@ -190,7 +213,12 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getSport().toString().equals("NON")){
                     conseil2.setText(no.get(10));
                 }
+                question3.setText("");
+                question4.setText("");
+                question5.setText("");
+                question6.setText("");
             }
+
         }
         else {
             // do the english stuff...
@@ -265,14 +293,22 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getConsultCardiologist().toString().equals("NON")){
                     conseil3.setText(no.get(8));
                 }
+                question4.setText("");
+                question5.setText("");
+                question6.setText("");
 
             }
             if (clicked_7) {
                 question_1.setText(q.get(9));
                 int poids = person.getPoids();
                 int taille = person.getTaille();
-                int imc = poids / (taille * taille);
-                String i = String.valueOf(imc);
+
+                double taille2 = taille/100.00;
+                double poids2 = Double.parseDouble(String.valueOf(poids));
+                double imc = poids2 / (taille2 * taille2);
+                int a = (int) Math.round(imc);
+
+                String i = String.valueOf(a);
                 result1.setText(i);
                 conseil_1.setText(for_imc.get(0));
                 question_2.setText(q.get(10));
@@ -282,6 +318,10 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getSport().toString().equals("NON")){
                     conseil2.setText(no.get(10));
                 }
+                question3.setText("");
+                question4.setText("");
+                question5.setText("");
+                question6.setText("");
             }
 
         }
