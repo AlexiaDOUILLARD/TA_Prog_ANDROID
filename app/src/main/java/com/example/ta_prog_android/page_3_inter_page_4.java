@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,6 +17,8 @@ public class page_3_inter_page_4 extends AppCompatActivity {
     private static final String TAG = "Page_3 Stat :";
     private Person person;
     private EditText taille, poids, sport;
+    boolean isAllFieldsChecked = false; // booleen pour vérifier le remplissage des champs
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,26 +32,35 @@ public class page_3_inter_page_4 extends AppCompatActivity {
             Person transferredPerson = intent.getParcelableExtra("FromPage3ToPage4");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
-                if (this.person.getTaille() !=0){
-                    taille.setText(person.getTaille());
+                int tail = person.getTaille();
+                String tail2 = String.valueOf(tail);
+                int poi = person.getPoids();
+                String poi2 = String.valueOf(poi);
+
+                if (this.person.getTaille() != 0) {
+                    taille.setText(tail2);
                 }
-                if (this.person.getPoids() != 0){
-                    poids.setText(person.getPoids());
+                if (this.person.getPoids() != 0) {
+                    poids.setText(poi2);
                 }
-                if (!this.person.getSport().toString().equals("NON_DEFINIS")){
+                if (!this.person.getSport().toString().equals("NON_DEFINIS")) {
                     sport.setText(person.getSport().toString());
                 }
             } else {
                 Person transferredPerson2 = intent.getParcelableExtra("FromPage5ToPage4");
                 if (transferredPerson2 != null) {
                     this.person = transferredPerson2;
-                    if (this.person.getTaille() !=0){
-                        taille.setText(person.getTaille());
+                    int tail = person.getTaille();
+                    String tail2 = String.valueOf(tail);
+                    int poi = person.getPoids();
+                    String poi2 = String.valueOf(poi);
+                    if (this.person.getTaille() != 0) {
+                        taille.setText(tail2);
                     }
-                    if (this.person.getPoids() != 0){
-                        poids.setText(person.getPoids());
+                    if (this.person.getPoids() != 0) {
+                        poids.setText(poi2);
                     }
-                    if (!this.person.getSport().toString().equals("NON_DEFINIS")){
+                    if (!this.person.getSport().toString().equals("NON_DEFINIS")) {
                         sport.setText(person.getSport().toString());
                     }
                 }
@@ -62,11 +74,11 @@ public class page_3_inter_page_4 extends AppCompatActivity {
             taille.setError("This field is required");
             return false;
         }
-        if(taille.getText().toString().contains(".")) {
+        if (taille.getText().toString().contains(".")) {
             taille.setError("Un taille en mètres n'a pas de virgule");
             return false;
         }
-        if (Integer.parseInt(taille.getText().toString())>= 250) {
+        if (Integer.parseInt(taille.getText().toString()) >= 250) {
             taille.setError("La taille est trop grande");
             return false;
         }
@@ -74,12 +86,16 @@ public class page_3_inter_page_4 extends AppCompatActivity {
             poids.setError("This field is required");
             return false;
         }
-        if(poids.getText().toString().contains(".")) {
+        if (poids.getText().toString().contains(".")) {
             poids.setError("Arrondissez votre poids au kilo supérieur");
             return false;
         }
-        if (Integer.parseInt(poids.getText().toString())>= 250) {
+        if (Integer.parseInt(poids.getText().toString()) >= 250) {
             poids.setError("Le poids est trop grand");
+            return false;
+        }
+        if ((sport.length() != 0) && (!verification_texte())) {
+            sport.setError("This value is not accepted (help : Oui/oui,Non/non,Yes/yes,No/no");
             return false;
         }
         // after all validation return true.
@@ -87,9 +103,9 @@ public class page_3_inter_page_4 extends AppCompatActivity {
     }
 
     // fonction qui retourne un booléen permettant de vérifier que le champs texte contient la réponse oui/non et pas autre chose
-    private boolean verification_texte (){
+    private boolean verification_texte() {
         String s = sport.getText().toString();
-        List<String> ma_liste = Arrays.asList("Oui", "Non", "oui","non","Yes","No","yes","no");
+        List<String> ma_liste = Arrays.asList("Oui", "Non", "oui", "non", "Yes", "No", "yes", "no");
         return ma_liste.contains(s);
     }
 
@@ -97,52 +113,71 @@ public class page_3_inter_page_4 extends AppCompatActivity {
     private void processIntentData() {
         Intent intent = getIntent();
         if (intent != null) {
-            Person transferredPerson3 = intent.getParcelableExtra("FromPage2ToPage3");
-            if (transferredPerson3 !=null){
+            Person transferredPerson3 = intent.getParcelableExtra("FromPage3ToPage4");
+            if (transferredPerson3 != null) {
                 this.person = transferredPerson3;
-                String s = editTextTextPersonName2.getText().toString();
-                if (s.equals("Oui") ||s.equals("oui") ||s.equals("Yes")|| s.equals("yes")){
-                    this.person.setDiscussWithDoctor(true);
+                String s = sport.getText().toString();
+                String tail = taille.getText().toString();
+                String poi = poids.getText().toString();
+                int t = Integer.parseInt(tail);
+                int p = Integer.parseInt(poi);
+                if (s.equals("Oui") || s.equals("oui") || s.equals("Yes") || s.equals("yes")) {
+                    this.person.setSport(YES_NO.OUI);
+                } else if (s.equals("Non") || s.equals("non") || s.equals("No") || s.equals("no")) {
+                    this.person.setSport(YES_NO.NON);
                 }
-                else if (switcher){
-                    this.person.setCardiacCheckUp(true);
+                if (t >= 0) {
+                    this.person.setTaille(t);
                 }
-                if (clicked_yes){
-                    this.person.setConsultCardiologist(YES_NO.OUI);
-                } else if (clicked_no){
-                    this.person.setConsultCardiologist(YES_NO.NON);
-                }else if (clicked_intero){
-                    this.person.setConsultCardiologist(YES_NO.NE_SAIT_PAS);
+                if (p >= 0) {
+                    this.person.setPoids(p);
                 }
                 Log.d(TAG, person.toString());
-            }
-            else {
-                Person transferredPerson4 = intent.getParcelableExtra("FromPage4ToPage3");
-                Log.d(TAG, "No Person found after transfer from Page3");
-                if (transferredPerson4 !=null){
+            } else {
+                Person transferredPerson4 = intent.getParcelableExtra("FromPage5ToPage4");
+                Log.d(TAG, "No Person found after transfer from Page5");
+                if (transferredPerson4 != null) {
                     this.person = transferredPerson4;
-                    String s = editTextTextPersonName2.getText().toString();
-                    if (s.equals("Oui") ||s.equals("oui") ||s.equals("Yes")|| s.equals("yes")){
-                        this.person.setDiscussWithDoctor(true);
+                    String s = sport.getText().toString();
+                    String tail = taille.getText().toString();
+                    String poi = poids.getText().toString();
+                    int t = Integer.parseInt(tail);
+                    int p = Integer.parseInt(poi);
+                    if (s.equals("Oui") || s.equals("oui") || s.equals("Yes") || s.equals("yes")) {
+                        this.person.setSport(YES_NO.OUI);
+                    } else if (s.equals("Non") || s.equals("non") || s.equals("No") || s.equals("no")) {
+                        this.person.setSport(YES_NO.NON);
                     }
-                    else if (switcher){
-                        this.person.setCardiacCheckUp(true);
+                    if (t >= 0) {
+                        this.person.setTaille(t);
                     }
-                    if (clicked_yes){
-                        this.person.setConsultCardiologist(YES_NO.OUI);
-                    } else if (clicked_no){
-                        this.person.setConsultCardiologist(YES_NO.NON);
-                    }else if (clicked_intero){
-                        this.person.setConsultCardiologist(YES_NO.NE_SAIT_PAS);
+                    if (p >= 0) {
+                        this.person.setPoids(p);
                     }
                     Log.d(TAG, person.toString());
-                    Log.d(TAG, "Person found after transfer from Page4 to Page3");
+                    Log.d(TAG, "Person found after transfer from Page5 to Page4");
 
                 }
             }
+        } else {
+            Log.d(TAG, "Error when transferring from Page4");
         }
-        else {
-            Log.d(TAG, "Error when transferring from Page3");
+    }
+
+    public void PreviousPage3(View view) {
+        Intent intent = new Intent(this, page_3.class);
+        processIntentData();
+        intent.putExtra("FromPage4ToPage3", this.person);
+        startActivity(intent);
+    }
+
+    public void NextPageResults(View sender) {
+        isAllFieldsChecked = CheckAllFields();
+        if (isAllFieldsChecked) {
+            Intent intent = new Intent(this, page_4.class);
+            processIntentData();
+            intent.putExtra("FromPage4ToPage5", this.person);
+            startActivity(intent);
         }
     }
 }

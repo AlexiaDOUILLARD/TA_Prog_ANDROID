@@ -196,7 +196,7 @@ public class page_3 extends AppCompatActivity {
     public void NextPageResults(View sender){
         isAllFieldsChecked = CheckAllFields();
         if (isAllFieldsChecked) {
-            Intent intent = new Intent(this, page_4.class);
+            Intent intent = new Intent(this, page_3_inter_page_4.class);
             processIntentData();
             intent.putExtra("FromPage3ToPage4", this.person);
             startActivity(intent);

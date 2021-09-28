@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#020101"
-        android:onClick="PreviousPage3"
+        android:onClick="PreviousPage4"
         android:text="@string/pr_c_dent"
         android:textColor="#FDFCFC"
         app:layout_constraintBottom_toBottomOf="parent"

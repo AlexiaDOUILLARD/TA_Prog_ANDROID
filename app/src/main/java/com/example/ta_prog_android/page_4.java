@@ -19,7 +19,7 @@ public class page_4 extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            Person transferredPerson = intent.getParcelableExtra("FromPage3ToPage4");
+            Person transferredPerson = intent.getParcelableExtra("FromPage4ToPage5");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
 
@@ -37,7 +37,7 @@ public class page_4 extends AppCompatActivity {
     private void processIntentData() {
         Intent intent = getIntent();
         if (intent != null) {
-            Person transferredPerson3 = intent.getParcelableExtra("FromPage3ToPage4");
+            Person transferredPerson3 = intent.getParcelableExtra("FromPage4ToPage5");
             if (transferredPerson3 !=null){
                 this.person = transferredPerson3;
                 Log.d(TAG, person.toString());
@@ -51,10 +51,10 @@ public class page_4 extends AppCompatActivity {
         }
     }
 
-    public void PreviousPage3(View view){
-        Intent intent = new Intent(this, page_3.class);
+    public void PreviousPage4(View view){
+        Intent intent = new Intent(this, page_3_inter_page_4.class);
         processIntentData();
-        intent.putExtra("FromPage4ToPage3", this.person);
+        intent.putExtra("FromPage5ToPage4", this.person);
         startActivity(intent);
     }
 
