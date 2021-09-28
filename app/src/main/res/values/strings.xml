@@ -39,10 +39,17 @@
     <string name="image_no" translatable="false">image_no</string>
     <string name="image_interro" translatable="false">image_interro</string>
     <string name="todo" translatable="false">TODO</string>
-    <string name="resultats">MY RESULTS</string>
+    <string name="resultats">YOUR RESULTS</string>
     <string name="VOTRE_FORME_PHYSIQUE">YOUR PHYSICAL FORM</string>
     <string name="intro">The more time you spend overweight in your life, the more cardiovascular risk factors are present. Losing weight - even a little and unsustainably - is good for the heart and arteries, regardless of age.</string>
     <string name="taille">What is your size ? (in cm)</string>
     <string name="poids">What is your weight ? (in kg)</string>
     <string name="sport">Do you participate in regular physical activity?</string>
+    <string name="intro_result">Click on a category to display your cardiac profile and our advice</string>
+    <string name="q1">1.</string>
+    <string name="q2">2.</string>
+    <string name="q3">3.</string>
+    <string name="q4">4.</string>
+    <string name="q5">5.</string>
+    <string name="q6">6.</string>
 </resources>
