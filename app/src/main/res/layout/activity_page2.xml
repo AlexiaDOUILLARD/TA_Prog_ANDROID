@@ -154,7 +154,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="252dp"
-        android:entries="@array/Spiner2_page2"
+        android:entries="@array/Spiner1_page2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class page_4 extends AppCompatActivity {
 
@@ -16,28 +17,45 @@ public class page_4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page4);
 
-        person = getIntent().getParcelableExtra("FromPage3ToResults");
-        processIntentData();
+        Intent intent = getIntent();
+        if (intent != null) {
+            Person transferredPerson = intent.getParcelableExtra("FromPage3ToPage4");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+
+            } else {
+                Log.d(TAG, "No Person found after transfer from Page3");
+            }
+        }
+        else {
+            Log.d(TAG, "Error when transferring from Page3");
+        }
+
 
     }
 
     private void processIntentData() {
         Intent intent = getIntent();
-        if(intent != null) {
-            // intent may store different data. To get the one matching the Person class,
-            // we need the key "FromActivity1ToActivity2" which was used for transfer
-            // No need to calls "new()" for allocating memory to transferredPerson
-            Person transferredPerson = intent.getParcelableExtra("FromPage3ToResults");
-            if (transferredPerson != null) {
-                transferredPerson.print();
+        if (intent != null) {
+            Person transferredPerson3 = intent.getParcelableExtra("FromPage3ToPage4");
+            if (transferredPerson3 !=null){
+                this.person = transferredPerson3;
+                Log.d(TAG, person.toString());
             }
             else {
-                Log.d(page_4.TAG, "No Person found after transfer from Activity1");
+                Log.d(page_4.TAG, "No Person found after transfer from Page 5 to Page4");
             }
         }
         else {
-            Log.d(page_4.TAG, "Error when transferring from Activity1");
+            Log.d(page_4.TAG, "Error when transferring from Page4");
         }
+    }
+
+    public void PreviousPage3(View view){
+        Intent intent = new Intent(this, page_3.class);
+        processIntentData();
+        intent.putExtra("FromPage4ToPage3", this.person);
+        startActivity(intent);
     }
 
 

@@ -39,4 +39,5 @@
     <string name="image_no" translatable="false">image_no</string>
     <string name="image_interro" translatable="false">image_interro</string>
     <string name="todo" translatable="false">TODO</string>
+    <string name="resultats">MY RESULTS</string>
 </resources>

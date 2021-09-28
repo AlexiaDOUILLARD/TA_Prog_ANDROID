@@ -43,32 +43,20 @@ public class page_2 extends AppCompatActivity {
             if (transferredPerson != null) {
                 this.person = transferredPerson;
                 if (this.person.getCardiacProblem().toString().equals("OUI")) {
-                    spinner3.setSelection(getIndex(spinner3, "Oui"));
-                } else if (this.person.getCardiacProblem().toString().equals("NON")) {
-                    spinner3.setSelection(getIndex(spinner3, "Non"));
+                    spinner3.setSelection(0);
                 }
                 if (this.person.getCholesterolProblem().toString().equals("OUI")) {
-                    spinner2.setSelection(getIndex(spinner2, "Oui"));
-                } else if (this.person.getCholesterolProblem().toString().equals("NON")) {
-                    spinner2.setSelection(getIndex(spinner2, "Non"));
+                    spinner2.setSelection(0);
                 }
                 if (this.person.getDiabetesProblem().toString().equals("OUI")) {
-                    spinner4.setSelection(getIndex(spinner4, "Oui"));
+                    spinner4.setSelection(0);
 
-                } else if (this.person.getDiabetesProblem().toString().equals("NON")) {
-                    spinner4.setSelection(getIndex(spinner4, "Non"));
                 }
                 if (this.person.getHypertensionProblem().toString().equals("OUI")) {
-                    spinner8.setSelection(getIndex(spinner8, "Oui"));
-                } else if (this.person.getHypertensionProblem().toString().equals("NON"))
-                    spinner8.setSelection(getIndex(spinner8, "Non"));
+                    spinner8.setSelection(0);
                 }
                 if (this.person.getFamilyHeartProblem().toString().equals("OUI")) {
-                    spinner6.setSelection(getIndex(spinner6, "Oui"));
-                } else if (this.person.getFamilyHeartProblem().toString().equals("NON")) {
-                    spinner6.setSelection(getIndex(spinner6, "Non"));
-                } else if (this.person.getFamilyHeartProblem().toString().equals("NE_SAIT_PAS")) {
-                    spinner6.setSelection(getIndex(spinner6, "Je ne sais pas"));
+                    spinner6.setSelection(0);
                 }
                 if (this.person.getImc().toString().equals("OUI")) {
                     checkBox1_page2.isChecked();
@@ -77,37 +65,24 @@ public class page_2 extends AppCompatActivity {
                 } else if (this.person.getImc().toString().equals("NE_SAIT_PAS")) {
                     checkBox3_page2.isChecked();
                 }
-            else {
+            } else {
                 Person transferredPerson2 = intent.getParcelableExtra("FromPage3ToPage2");
                 if (transferredPerson2 != null) {
                     this.person = transferredPerson2;
                     if (this.person.getCardiacProblem().toString().equals("OUI")) {
-                        spinner3.setSelection(getIndex(spinner3, "Oui"));
-                    } else if (this.person.getCardiacProblem().toString().equals("NON")) {
-                        spinner3.setSelection(getIndex(spinner3, "Non"));
+                        spinner3.setSelection(0);
                     }
                     if (this.person.getCholesterolProblem().toString().equals("OUI")) {
-                        spinner2.setSelection(getIndex(spinner2, "Oui"));
-                    } else if (this.person.getCholesterolProblem().toString().equals("NON")) {
-                        spinner2.setSelection(getIndex(spinner2, "Non"));
+                        spinner2.setSelection(0);
                     }
                     if (this.person.getDiabetesProblem().toString().equals("OUI")) {
-                        spinner4.setSelection(getIndex(spinner4, "Oui"));
-
-                    } else if (this.person.getDiabetesProblem().toString().equals("NON")) {
-                        spinner4.setSelection(getIndex(spinner4, "Non"));
+                        spinner4.setSelection(0);
                     }
                     if (this.person.getHypertensionProblem().toString().equals("OUI")) {
-                        spinner8.setSelection(getIndex(spinner8, "Oui"));
-                    } else if (this.person.getHypertensionProblem().toString().equals("NON"))
-                        spinner8.setSelection(getIndex(spinner8, "Non"));
+                        spinner8.setSelection(0);
                     }
                     if (this.person.getFamilyHeartProblem().toString().equals("OUI")) {
-                        spinner6.setSelection(getIndex(spinner6, "Oui"));
-                    } else if (this.person.getFamilyHeartProblem().toString().equals("NON")) {
-                        spinner6.setSelection(getIndex(spinner6, "Non"));
-                    } else if (this.person.getFamilyHeartProblem().toString().equals("NE_SAIT_PAS")) {
-                        spinner6.setSelection(getIndex(spinner6, "Je ne sais pas"));
+                        spinner6.setSelection(0);
                     }
                     if (this.person.getImc().toString().equals("OUI")) {
                         checkBox1_page2.setChecked(true);
@@ -118,6 +93,7 @@ public class page_2 extends AppCompatActivity {
                     }
                 }
             }
+        }
         // Listener sur les 3 CheckBox
         checkBox1_page2.setOnClickListener(view -> BooleanCheck = ((CheckBox) view).isChecked());
 
@@ -126,14 +102,6 @@ public class page_2 extends AppCompatActivity {
         checkBox3_page2.setOnClickListener(view -> BooleanCheck3 = ((CheckBox) view).isChecked());
     }
 
-    private int getIndex(Spinner spinner, String myString){
-        for (int i=0;i<spinner.getCount();i++){
-            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
-                return i;
-            }
-        }
-        return 0;
-    }
 
     //Fonction pour cocher une seul check box à la fois
     public boolean CheckBox_control() {
@@ -167,7 +135,7 @@ public class page_2 extends AppCompatActivity {
                 int pos2 = spinner2.getSelectedItemPosition();
                 int pos4 = spinner4.getSelectedItemPosition();
                 int pos8 = spinner8.getSelectedItemPosition();
-                int pos6 = spinner6.getSelectedItemPosition();
+                int fam = spinner6.getSelectedItemPosition();
 
                 if (pos3 == 0){
                     this.person.setCardiacProblem(YES_NO.OUI);
@@ -189,13 +157,10 @@ public class page_2 extends AppCompatActivity {
                 } else if (pos8 == 1){
                     this.person.setHypertensionProblem(YES_NO.NON);
                 }
-                if (pos6 == 0){
+                if (fam == 0){
                     this.person.setFamilyHeartProblem(YES_NO.OUI);
-                } else if (pos6 == 1){
+                } else if (fam == 1){
                     this.person.setFamilyHeartProblem(YES_NO.NON);
-                }
-                else if (pos6 == 2){
-                    this.person.setFamilyHeartProblem(YES_NO.NE_SAIT_PAS);
                 }
                 if (checkBox1_page2.isChecked()) {
                     this.person.setImc(YES_NO.OUI);
@@ -215,7 +180,7 @@ public class page_2 extends AppCompatActivity {
                     int pos4 = spinner4.getSelectedItemPosition();
                     int pos2 = spinner2.getSelectedItemPosition();
                     int pos8 = spinner8.getSelectedItemPosition();
-                    int pos6 = spinner6.getSelectedItemPosition();
+                    int fam = spinner6.getSelectedItemPosition();
                     if (pos3 == 0){
                         this.person.setCardiacProblem(YES_NO.OUI);
                     } else if (pos3 == 1){
@@ -236,13 +201,10 @@ public class page_2 extends AppCompatActivity {
                     } else if (pos8 == 1){
                         this.person.setHypertensionProblem(YES_NO.NON);
                     }
-                    if (pos6 == 0){
+                    if (fam == 0){
                         this.person.setFamilyHeartProblem(YES_NO.OUI);
-                    } else if (pos6 == 1){
+                    } else if (fam == 1){
                         this.person.setFamilyHeartProblem(YES_NO.NON);
-                    }
-                    else if (pos6 == 2){
-                        this.person.setFamilyHeartProblem(YES_NO.NE_SAIT_PAS);
                     }
                     if (checkBox1_page2.isChecked()) {
                         this.person.setImc(YES_NO.OUI);
