@@ -116,6 +116,11 @@ public class page_4 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void FinishApp(View view){
+        page_4.this.finish();
+        moveTaskToBack(true);
+    }
+
     public void displayResults(){
         nom.setText(person.getName());
         if (Locale.getDefault().toString().equals("FR")  || Locale.getDefault().toString().equals("fr")) {

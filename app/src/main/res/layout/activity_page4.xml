@@ -233,4 +233,18 @@
         app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#040303"
+        android:onClick="FinishApp"
+        android:text="@string/finish"
+        android:textColor="#FAF9F9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toEndOf="@+id/previous" />
 </androidx.constraintlayout.widget.ConstraintLayout>

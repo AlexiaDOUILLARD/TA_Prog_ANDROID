@@ -46,4 +46,5 @@
     <string name="poids">What is your weight ? (in kg)</string>
     <string name="sport">Do you participate in regular physical activity?</string>
     <string name="intro_result">Click on a category to display your cardiac profile and our advice</string>
+    <string name="finish">Finish</string>
 </resources>

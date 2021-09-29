@@ -36,4 +36,5 @@
     <string name="poids">Quel est votre poids ? (en kg)</string>
     <string name="sport">Pratiquez-vous une activité physique régulière ?</string>
     <string name="intro_result">"Cliquez sur une catégorie pour afficher votre profil cardiaque et nos conseils "</string>
+    <string name="finish">Terminer</string>
 </resources>
