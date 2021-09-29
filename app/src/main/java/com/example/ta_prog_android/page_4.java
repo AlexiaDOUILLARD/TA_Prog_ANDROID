@@ -65,11 +65,13 @@ public class page_4 extends AppCompatActivity {
             Log.d(TAG, "Error when transferring from Page3");
         }
 
+
         button5.setOnClickListener(view -> {
             clicked_5 = true;
             clicked_6 = false;
             clicked_7 = false;
             displayResults();
+
         });
 
         button6.setOnClickListener(view -> {
@@ -77,6 +79,7 @@ public class page_4 extends AppCompatActivity {
             clicked_5 = false;
             clicked_7 = false;
             displayResults();
+
         });
 
         button7.setOnClickListener(view -> {
@@ -168,17 +171,17 @@ public class page_4 extends AppCompatActivity {
             }
             if (clicked_6) {
                 question_1.setText(q.get(6));
-                if (person.getDiscussWithDoctor().equals(true)){
-                    result1.setText(for_boolean.get(0));
+                if (person.getDiscussWithDoctor()){
+                    result1.setText(for_boolean.get(1));
                     conseil_1.setText(yes.get(6));
-                } else if (person.getDiscussWithDoctor().equals(false)){
+                } else if (!person.getDiscussWithDoctor()){
                     conseil_1.setText(no.get(6));
                 }
                 question_2.setText(q.get(7));
-                if (person.getCardiacCheckUp().equals(true)){
-                    reponse2.setText(for_boolean.get(1));
+                if (person.getCardiacCheckUp()){
+                    reponse2.setText(for_boolean.get(0));
                     conseil2.setText(yes.get(7));
-                } else if (person.getCardiacCheckUp().equals(false)){
+                } else if (!person.getCardiacCheckUp()){
                     conseil2.setText(no.get(7));
                 }
                 question3.setText(q.get(8));
@@ -188,9 +191,15 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getConsultCardiologist().toString().equals("NON")){
                     conseil3.setText(no.get(8));
                 }
-                question4.setText("");
-                question5.setText("");
-                question6.setText("");
+                question4.setText(" ");
+                reponse4.setText(" ");
+                conseil4.setText(" ");
+                question5.setText(" ");
+                reponse5.setText(" ");
+                conseil5.setText(" ");
+                question6.setText(" ");
+                reponse6.setText(" ");
+                conseil6.setText(" ");
 
             }
             if (clicked_7) {
@@ -214,9 +223,17 @@ public class page_4 extends AppCompatActivity {
                     conseil2.setText(no.get(10));
                 }
                 question3.setText("");
-                question4.setText("");
-                question5.setText("");
-                question6.setText("");
+                reponse3.setText(" ");
+                conseil3.setText(" ");
+                question4.setText(" ");
+                reponse4.setText(" ");
+                conseil4.setText(" ");
+                question5.setText(" ");
+                reponse5.setText(" ");
+                conseil5.setText(" ");
+                question6.setText(" ");
+                reponse6.setText(" ");
+                conseil6.setText(" ");
             }
 
         }
@@ -273,17 +290,17 @@ public class page_4 extends AppCompatActivity {
             }
             if (clicked_6) {
                 question_1.setText(q.get(6));
-                if (person.getDiscussWithDoctor().equals(true)){
-                    result1.setText(for_boolean.get(0));
+                if (person.getDiscussWithDoctor()){
+                    result1.setText(for_boolean.get(1));
                     conseil_1.setText(yes.get(6));
-                } else if (person.getDiscussWithDoctor().equals(false)){
+                } else if (!person.getDiscussWithDoctor()){
                     conseil_1.setText(no.get(6));
                 }
                 question_2.setText(q.get(7));
-                if (person.getCardiacCheckUp().equals(true)){
-                    reponse2.setText(for_boolean.get(1));
+                if (person.getCardiacCheckUp()){
+                    reponse2.setText(for_boolean.get(0));
                     conseil2.setText(yes.get(7));
-                } else if (person.getCardiacCheckUp().equals(false)){
+                } else if (!person.getCardiacCheckUp()){
                     conseil2.setText(no.get(7));
                 }
                 question3.setText(q.get(8));
@@ -293,9 +310,15 @@ public class page_4 extends AppCompatActivity {
                 } else if (person.getConsultCardiologist().toString().equals("NON")){
                     conseil3.setText(no.get(8));
                 }
-                question4.setText("");
-                question5.setText("");
-                question6.setText("");
+                question4.setText(" ");
+                reponse4.setText(" ");
+                conseil4.setText(" ");
+                question5.setText(" ");
+                reponse5.setText(" ");
+                conseil5.setText(" ");
+                question6.setText(" ");
+                reponse6.setText(" ");
+                conseil6.setText(" ");
 
             }
             if (clicked_7) {
@@ -319,9 +342,17 @@ public class page_4 extends AppCompatActivity {
                     conseil2.setText(no.get(10));
                 }
                 question3.setText("");
-                question4.setText("");
-                question5.setText("");
-                question6.setText("");
+                reponse3.setText(" ");
+                conseil3.setText(" ");
+                question4.setText(" ");
+                reponse4.setText(" ");
+                conseil4.setText(" ");
+                question5.setText(" ");
+                reponse5.setText(" ");
+                conseil5.setText(" ");
+                question6.setText(" ");
+                reponse6.setText(" ");
+                conseil6.setText(" ");
             }
 
         }

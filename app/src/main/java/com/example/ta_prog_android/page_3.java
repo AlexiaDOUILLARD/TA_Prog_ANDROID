@@ -67,13 +67,15 @@ public class page_3 extends AppCompatActivity {
                 this.person = transferredPerson;
                 String yes = "Oui";
                 String non = "Non";
-                if (this.person.getDiscussWithDoctor()){
-                    editTextTextPersonName2.setText(yes);
-                } else if (!this.person.getDiscussWithDoctor()){
-                    editTextTextPersonName2.setText(non);
-                }
+//                if (this.person.getDiscussWithDoctor()){
+//                    editTextTextPersonName2.setText(yes);
+//                } else if (!this.person.getDiscussWithDoctor()){
+//                    editTextTextPersonName2.setText(non);
+//                }
                 if (this.person.getCardiacCheckUp()){
                     switch2.setChecked(true);
+                } else if (!this.person.getCardiacCheckUp()) {
+                    switch2.setChecked(false);
                 }
                 if (this.person.getConsultCardiologist().toString().equals("OUI")){
                     imageButton.setSelected(true);
@@ -95,6 +97,8 @@ public class page_3 extends AppCompatActivity {
                     }
                     if (this.person.getCardiacCheckUp()){
                         switch2.setChecked(true);
+                    } else if (!this.person.getCardiacCheckUp()) {
+                        switch2.setChecked(false);
                     }
                     if (this.person.getConsultCardiologist().toString().equals("OUI")){
                         imageButton.setSelected(true);
