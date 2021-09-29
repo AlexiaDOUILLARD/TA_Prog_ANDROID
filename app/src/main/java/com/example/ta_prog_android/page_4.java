@@ -126,6 +126,8 @@ public class page_4 extends AppCompatActivity {
             List<String> for_boolean = Arrays.asList("Oui","Non");
             List<String> for_imc = Arrays.asList("Consultez le site de l'OMS pour plus de renseignement sur votre IMC","");
             if (clicked_5) {
+                clicked_6 = false;
+                clicked_7 =false;
                 question_1.setText(q.get(0));
                 result1.setText(person.getCardiacProblem().toString());
                 if (person.getCardiacProblem().toString().equals("OUI")){
@@ -170,11 +172,14 @@ public class page_4 extends AppCompatActivity {
                 }
             }
             if (clicked_6) {
+                clicked_5 = false;
+                clicked_7 =false;
                 question_1.setText(q.get(6));
                 if (person.getDiscussWithDoctor()){
-                    result1.setText(for_boolean.get(1));
+                    result1.setText(for_boolean.get(0));
                     conseil_1.setText(yes.get(6));
                 } else if (!person.getDiscussWithDoctor()){
+                    result1.setText(for_boolean.get(1));
                     conseil_1.setText(no.get(6));
                 }
                 question_2.setText(q.get(7));
@@ -182,6 +187,7 @@ public class page_4 extends AppCompatActivity {
                     reponse2.setText(for_boolean.get(0));
                     conseil2.setText(yes.get(7));
                 } else if (!person.getCardiacCheckUp()){
+                    reponse2.setText(for_boolean.get(1));
                     conseil2.setText(no.get(7));
                 }
                 question3.setText(q.get(8));
@@ -203,6 +209,8 @@ public class page_4 extends AppCompatActivity {
 
             }
             if (clicked_7) {
+                clicked_6 = false;
+                clicked_5 =false;
                 question_1.setText(q.get(9));
                 int poids = person.getPoids();
                 int taille = person.getTaille();
@@ -245,6 +253,8 @@ public class page_4 extends AppCompatActivity {
             List<String> for_boolean = Arrays.asList("Oui","Non");
             List<String> for_imc = Arrays.asList("Consultez le site de l'OMS pour plus de renseignement sur votre IMC","");
             if (clicked_5) {
+                clicked_6 = false;
+                clicked_7 =false;
                 question_1.setText(q.get(0));
                 result1.setText(person.getCardiacProblem().toString());
                 if (person.getCardiacProblem().toString().equals("OUI")){
@@ -289,11 +299,14 @@ public class page_4 extends AppCompatActivity {
                 }
             }
             if (clicked_6) {
+                clicked_5 = false;
+                clicked_7 =false;
                 question_1.setText(q.get(6));
                 if (person.getDiscussWithDoctor()){
-                    result1.setText(for_boolean.get(1));
+                    result1.setText(for_boolean.get(0));
                     conseil_1.setText(yes.get(6));
                 } else if (!person.getDiscussWithDoctor()){
+                    result1.setText(for_boolean.get(1));
                     conseil_1.setText(no.get(6));
                 }
                 question_2.setText(q.get(7));
@@ -301,6 +314,7 @@ public class page_4 extends AppCompatActivity {
                     reponse2.setText(for_boolean.get(0));
                     conseil2.setText(yes.get(7));
                 } else if (!person.getCardiacCheckUp()){
+                    reponse2.setText(for_boolean.get(1));
                     conseil2.setText(no.get(7));
                 }
                 question3.setText(q.get(8));
@@ -322,6 +336,8 @@ public class page_4 extends AppCompatActivity {
 
             }
             if (clicked_7) {
+                clicked_5 = false;
+                clicked_6 =false;
                 question_1.setText(q.get(9));
                 int poids = person.getPoids();
                 int taille = person.getTaille();
