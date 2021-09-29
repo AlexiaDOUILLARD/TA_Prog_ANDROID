@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class page_4 extends AppCompatActivity {
 

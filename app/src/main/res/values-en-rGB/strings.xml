@@ -1,26 +1,20 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">TA_Prog_ANDROID</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="mon_profil">MY PROFILE</string>
     <string name="quel_ge_avez_vous">How old are you ?</string>
     <string name="suivant">Next</string>
     <string name="vous_tes">You are :</string>
-    <string name="profil_logo" translatable="false">profil_logo</string>
-    <string name="question_1" translatable="false" tools:ignore="Typos">question_1</string>
-    <string name="question_2" translatable="false">question_2</string>
     <string name="un_homme">A man</string>
     <string name="une_femme">A woman</string>
     <string name="moins_de_40ans">Under 40</string>
     <string name="entre_40_et_60ans">Between 40 and 60 years old</string>
     <string name="plus_de_60_ans">Over 60 years</string>
     <string name="pr_c_dent">Previous</string>
-    <string name="image_daccueil" translatable="false" />
     <string name="nom">Name :</string>
     <string name="je_me_test">I test myself</string>
-    <string name="mon_suivi_cardiaque">MY HEART MONITORING</string>
-    <string name="stetoscope" translatable="false">stetoscope</string>
+    <string name="mon_suivi_cardiaque">Have you ever had a heart checkup?</string>
     <string name="avez_vous_d_j_effectu_un_bilan_cardiaque">Have you ever had a heart checkup?</string>
     <string name="avez_vous_d_j_consult_un_cardiologue">Have you ever seen a cardiologist?</string>
-    <string name="trois" translatable="false">trois</string>
     <string name="msg_error">error</string>
     <string name="point_coeur">Have you already reviewed your cardiovascular risk with your doctor?</string>
     <string name="prblm_cardiaque">Do you have a heart problem?</string>
@@ -33,12 +27,8 @@
     <string name="Oui">Oui</string>
     <string name="Non">No</string>
     <string name="Je_ne_sais_pas">I don\'t know</string>
-    <string name="risk_cardiovascular">Cardiovascular risk ?</string>
     <string name="default_no">Default no</string>
-    <string name="image_yes" translatable="false">image_yes</string>
-    <string name="image_no" translatable="false">image_no</string>
-    <string name="image_interro" translatable="false">image_interro</string>
-    <string name="todo" translatable="false">TODO</string>
+    <string name="risk_cardiovascular">Cardiovascular risk ?</string>
     <string name="resultats">YOUR RESULTS</string>
     <string name="VOTRE_FORME_PHYSIQUE">YOUR PHYSICAL FORM</string>
     <string name="intro">The more time you spend overweight in your life, the more cardiovascular risk factors are present. Losing weight - even a little and unsustainably - is good for the heart and arteries, regardless of age.</string>

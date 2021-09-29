@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -44,7 +43,7 @@ public class page_3_inter_page_4 extends AppCompatActivity {
                     poids.setText(poi2);
                 }
                 if (!this.person.getSport().toString().equals("NON_DEFINIS")) {
-                    sport.setText(person.getSport().toString());
+                    sport.setText(person.getSport().toString().toLowerCase());
                 }
             } else {
                 Person transferredPerson2 = intent.getParcelableExtra("FromPage5ToPage4");
@@ -61,7 +60,7 @@ public class page_3_inter_page_4 extends AppCompatActivity {
                         poids.setText(poi2);
                     }
                     if (!this.person.getSport().toString().equals("NON_DEFINIS")) {
-                        sport.setText(person.getSport().toString());
+                        sport.setText(person.getSport().toString().toLowerCase());
                     }
                 }
             }

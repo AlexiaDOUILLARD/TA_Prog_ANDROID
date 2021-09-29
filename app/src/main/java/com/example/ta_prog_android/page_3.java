@@ -2,6 +2,7 @@ package com.example.ta_prog_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,9 +26,9 @@ public class page_3 extends AppCompatActivity {
     boolean clicked_yes = false; // booléen pour l'image bouton Yes
     boolean clicked_no = false; // booléen pour l'image bouton Non
     boolean clicked_intero = false; // // booléen pour l'image bouton Je sais pas
-    private Switch switch2;
     boolean switcher = false;
 
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ public class page_3 extends AppCompatActivity {
         imageButton = findViewById(R.id.imageButton);
         imageButton2 = findViewById(R.id.imageButton2);
         imageButton3 = findViewById(R.id.imageButton3);
-        switch2 = findViewById(R.id.switch2);
+        Switch switch2 = findViewById(R.id.switch2);
 
         switch2.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
@@ -65,13 +66,6 @@ public class page_3 extends AppCompatActivity {
             Person transferredPerson = intent.getParcelableExtra("FromPage2ToPage3");
             if (transferredPerson != null) {
                 this.person = transferredPerson;
-                String yes = "Oui";
-                String non = "Non";
-//                if (this.person.getDiscussWithDoctor()){
-//                    editTextTextPersonName2.setText(yes);
-//                } else if (!this.person.getDiscussWithDoctor()){
-//                    editTextTextPersonName2.setText(non);
-//                }
                 if (this.person.getCardiacCheckUp()){
                     switch2.setChecked(true);
                 } else if (!this.person.getCardiacCheckUp()) {

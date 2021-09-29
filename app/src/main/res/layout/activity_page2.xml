@@ -4,245 +4,248 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7EB5306E"
+    android:background="@drawable/fond_rouge"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="94dp">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="115dp"
-        android:layout_height="96dp"
-        android:layout_marginBottom="632dp"
+        android:layout_width="81dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="636dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/coeur"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/coeur" />
 
     <TextView
         android:id="@+id/coeur"
-        android:layout_width="268dp"
-        android:layout_height="65dp"
+        android:layout_width="261dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
         android:text="@string/Coeur"
         android:textColor="#000000"
-        android:textSize="48sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/prblmcardiaque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="44dp"
         android:text="@string/prblm_cardiaque"
-        android:textSize="20sp"
+        android:textColor="#616161"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/prblmcolesterol"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/prblmcolesterol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:text="@string/prblm_cholesterol"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#616161"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintTop_toBottomOf="@+id/prblmcardiaque" />
 
     <TextView
         android:id="@+id/diabetique"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
+        android:layout_width="183dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="40dp"
         android:text="@string/diabetique"
-        android:textSize="20sp"
+        android:textColor="#616161"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/spinner4"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/prblmcolesterol" />
 
     <TextView
         android:id="@+id/hypertension"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
+        android:layout_marginTop="56dp"
         android:text="@string/hypertension"
-        android:textSize="20sp"
+        android:textColor="#616161"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diabetique" />
 
     <TextView
         android:id="@+id/AVC"
-        android:layout_width="274dp"
-        android:layout_height="123dp"
-        android:layout_marginBottom="196dp"
+        android:layout_width="283dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="40dp"
         android:text="@string/AVC"
-        android:textSize="17sp"
+        android:textColor="#616161"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hypertension" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="112dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="232dp"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/prblmcolesterol"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Spinner
         android:id="@+id/spinner3"
-        android:layout_width="114dp"
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginTop="144dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.881"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/prblmcardiaque" />
 
     <Spinner
         android:id="@+id/spinner4"
-        android:layout_width="112dp"
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="8dp"
         android:entries="@array/Spiner1_page2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner5"
-        android:layout_width="102dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="33dp"
-        android:entries="@array/Spiner1_page2"
-        app:layout_constraintBottom_toTopOf="@+id/spinner6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
-        app:layout_constraintStart_toEndOf="@+id/hypertension"
-        app:layout_constraintTop_toTopOf="@+id/hypertension"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/diabetique" />
 
     <Spinner
         android:id="@+id/spinner6"
-        android:layout_width="104dp"
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginTop="20dp"
         android:entries="@array/Spiner1_page2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AVC" />
 
     <Spinner
         android:id="@+id/spinner8"
-        android:layout_width="102dp"
+        android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="332dp"
         android:entries="@array/Spiner1_page2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="@+id/hypertension" />
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="@+id/hypertension"
+        app:layout_constraintTop_toTopOf="@+id/hypertension" />
 
     <TextView
         android:id="@+id/IMC"
         android:layout_width="381dp"
         android:layout_height="44dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginTop="32dp"
         android:text="@string/IMC"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AVC"
+        android:textColor="#616161" />
 
     <Button
         android:id="@+id/precedentpage2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#0C0C0C"
         android:onClick="PreviousPage"
         android:text="@string/pr_c_dent"
+        android:textColor="#FAF8F8"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/suivantpage2"
-        android:layout_width="97dp"
-        android:layout_height="48dp"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="#0C0C0C"
         android:onClick="NextPage"
         android:text="@string/suivant"
+        android:textColor="#FAF8F8"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox1_page2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="80dp"
         android:minHeight="48dp"
-        android:onClick="CheckBox_control"
         android:text="@string/Oui"
+        android:textColor="#616161"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox2_page2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
         android:layout_marginBottom="80dp"
         android:minHeight="48dp"
-        android:onClick="CheckBox_control"
         android:text="@string/Non"
+        android:textColor="#616161"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox3_page2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginBottom="80dp"
         android:minHeight="48dp"
-        android:onClick="CheckBox_control"
         android:text="@string/Je_ne_sais_pas"
+        android:textColor="#616161"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
